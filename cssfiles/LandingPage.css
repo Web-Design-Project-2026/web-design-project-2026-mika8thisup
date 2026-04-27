@@ -1,17 +1,23 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: black;
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #4fff36;
+  background: #9ced48;
   padding: 15px 24px;
   border-radius: 5px;
   margin: 20px;
   font-family: Special Gothic Expanded One;
 }
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 /* NAV LIST */
 .nav-links ul {
   list-style: none;
@@ -33,4 +39,24 @@ body {
 /* HOVER EFFECT */
 .nav-links a:hover {
   opacity: 0.7;
+}
+
+.footer {
+  position: relative;
+  bottom: -500px;
+  width: 100%;
+  background-color: #fa538b;
+  padding: 20px;
+  text-align: left;
+  color: white;
+  font-size: 70%;
+  font-family: Poppins;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer h2 {
+  margin: 0;
+  font-size: 2vw;
+  font-family: Special Gothic Expanded One;
 }
