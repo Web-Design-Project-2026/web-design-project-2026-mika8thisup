@@ -57,6 +57,10 @@ body {
 }
 .footer h2 {
   margin: 0;
-  font-size: 2vw;
+  font-size: 1.6vw;
   font-family: Special Gothic Expanded One;
+}
+.footer p {
+  margin: 5px 0;
+  font-size: 0.9vw;
 }
