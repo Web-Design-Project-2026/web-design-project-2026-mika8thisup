@@ -43,7 +43,7 @@ body {
 
 .footer {
   background-color: #fa538b;
-  padding: 40px 20px;
+  padding: 20px 40px;
   color: white;
 }
 .footer-container {
@@ -51,7 +51,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   align-items: start;
   gap: 90px;
 }
