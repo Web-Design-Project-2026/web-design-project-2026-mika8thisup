@@ -11,7 +11,7 @@ body {
   padding: 15px 24px;
   border-radius: 5px;
   margin: 20px;
-  font-family: Special Gothic Expanded One;
+  font-family: "Special Gothic Expanded One", sans-serif;
 }
 .logo {
   font-size: 24px;
@@ -42,25 +42,42 @@ body {
 }
 
 .footer {
-  position: relative;
-  bottom: -500px;
-  width: 100%;
   background-color: #fa538b;
-  padding: 20px;
-  text-align: left;
+  padding: 40px 20px;
   color: white;
-  font-size: 70%;
-  font-family: Poppins;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+}
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: start;
+  gap: 90px;
 }
 .footer h2 {
-  margin: 0;
-  font-size: 1.6vw;
-  font-family: Special Gothic Expanded One;
+  font-size: clamp(16px, 1.2vw, 20px);
+  font-family: "Special Gothic Expanded One", sans-serif;
 }
 .footer p {
   margin: 5px 0;
-  font-size: 0.9vw;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(10px, 1vw, 16px);
+}
+
+.footer-logo-img {
+  width: 50%;
+  height: auto;
+  display: block;
+}
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-column,
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
