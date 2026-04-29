@@ -1,7 +1,28 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Special Gothic Expanded One", sans-serif;
   background-color: black;
+}
+/**background text, ill make an image instead later to simplify this**/
+.background-text {
+  position: fixed;
+  inset: 0;
+  z-index: -9999;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 80px;
+  overflow: hidden;
+  font-size: 30px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.1);
+  white-space: pre-wrap;
+  word-break: break-word;
+  letter-spacing: normal;
+}
+
+.background-text::before {
+  content: "ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ";
 }
 .navbar {
   display: flex;
@@ -80,4 +101,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.navbar,
+.footer {
+  position: relative;
+  z-index: 10;
 }
