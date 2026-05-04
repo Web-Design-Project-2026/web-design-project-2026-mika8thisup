@@ -17,17 +17,17 @@ body {
 .background-text {
   position: fixed;
   inset: 0;
+
   z-index: -1;
-  overflow: hidden;
+
+  background-image: url("../images/background.png");
+  background-repeat: repeat;
+
+  background-size: 500px;
+
   pointer-events: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  font-size: 20px;
-  line-height: 1;
-  color: rgb(21, 21, 21);
 }
-/**this is messy asf, so imma make a png pattern instead /maddie**/
+/**this is messy asf, so imma make a png pattern instead /maddie
 .background-text::before {
   content: "ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA "
     "ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA "
@@ -38,7 +38,7 @@ body {
   word-break: break-word;
   display: block;
   width: 100%;
-}
+} **/
 .navbar {
   display: flex;
   justify-content: space-between;
