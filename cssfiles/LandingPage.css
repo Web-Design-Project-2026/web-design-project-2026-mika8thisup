@@ -1,38 +1,55 @@
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: "Special Gothic Expanded One", sans-serif;
   background-color: black;
+  overflow-x: hidden;
+}
+.content {
+  flex: 1;
+}
+.hero-section {
+  min-height: 75vh;
 }
 /**background text, ill make an image instead later to simplify this**/
 .background-text {
   position: fixed;
   inset: 0;
-  z-index: -9999;
-  pointer-events: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: 80px;
+  z-index: -1;
   overflow: hidden;
-  font-size: 30px;
+  pointer-events: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  font-size: 20px;
   line-height: 1;
   color: rgba(255, 255, 255, 0.1);
-  white-space: pre-wrap;
-  word-break: break-word;
-  letter-spacing: normal;
 }
-
+/**this is messy asf, so imma make a png pattern instead /maddie**/
 .background-text::before {
-  content: "ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ";
+  content: "ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA "
+    "ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA "
+    "ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA "
+    "ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA "
+    "ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ASTR3LA ";
+  white-space: normal;
+  word-break: break-word;
+  display: block;
+  width: 100%;
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #9ced48;
-  padding: 15px 24px;
+  padding: 18px 30px;
   border-radius: 5px;
-  margin: 20px;
+  margin: 20px 20px 0 20px;
   font-family: "Special Gothic Expanded One", sans-serif;
+  position: relative;
+  z-index: 10;
 }
 .logo {
   font-size: 24px;
@@ -66,15 +83,16 @@ body {
   background-color: #fa538b;
   padding: 20px 40px;
   color: white;
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
 }
 .footer-container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: start;
-  gap: 90px;
+  gap: 40px;
 }
 .footer h2 {
   font-size: clamp(16px, 1.2vw, 20px);
@@ -101,10 +119,4 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-}
-
-.navbar,
-.footer {
-  position: relative;
-  z-index: 10;
 }
