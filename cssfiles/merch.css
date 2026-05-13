@@ -1,6 +1,10 @@
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
   z-index: 1000;
 
   display: flex;
@@ -10,14 +14,7 @@
   background: #9ced48;
   padding: 15px 24px;
   border-radius: 5px;
-
-  width: 90%;
-  margin: 0 auto; /* center horizontally only */
-
-  font-family: "Special Gothic Expanded One", sans-serif;
 }
-
-
 
 .logo {
   font-size: 24px;
@@ -54,38 +51,41 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 1;
+  background-color:black;
+  overflow-x: hidden;
 }
 
 .background-image {
   position: fixed;
   inset: 0;
 
-  background-image: url("images/merchphotos/merchbg.png");
-  background-size: cover;
+  background-image: url("../images/merchphotos/merchbg.png");
+  background-size: 150%;
   background-position: center;
 
-  opacity: 1;  /* correct opacity */
+  opacity: 0.45;
 
-  z-index: 1;
+  z-index: -1;
 }
 
 .main {
   padding: 5vh 20px;
   width: 70%;
   margin: 0 auto;  /* THIS is the missing piece */
+  flex: 1;
 }
 
 .bundle {
-    width: 1000px;
+    width: 900px;
     height: auto;
      display: block;
   margin: 0 auto;
+  padding-top: 75px;
 }
 .merch-1 {
-    width: 200px;
+    width: 215px;
     height: auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 .grid {
@@ -104,7 +104,7 @@ body {
 .item {
     width: 100%;
     height: 400px;
-  background: #9ced48;
+  background: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,10 +115,17 @@ body {
   overflow: hidden;
   padding: 10px;
 }
+
+.text-items {
+  color: white;
+  font-size: 13px;
+}
+
 .footer {
-  Padding-top: 50px;
-    background-color: #fa538b;
-  padding: 20px 40px;
+  width: 100%; /* NEW */
+
+  background-color: #fa538b;
+  padding: 80px 40px; /* CHANGED (was smaller padding) */
   color: white;
 }
 .footer-container {
@@ -166,15 +173,11 @@ body {
 }
 
 html, body {
-  height: 100%;
   margin: 0;
+  min-height: 100%;
 }
 
 body {
   display: flex;
   flex-direction: column;
-}
-
-.content {
-  flex: 1; /* This pushes the footer down */
 }
