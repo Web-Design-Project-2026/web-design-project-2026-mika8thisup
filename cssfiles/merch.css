@@ -1,3 +1,42 @@
+/* =========================
+   BODY
+========================= */
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  background-color: black;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background-image {
+  position: fixed;
+  inset: 0;
+
+  background-image: url("../images/merchphotos/merchbg.png");
+  background-size: 150%;
+  background-position: center;
+
+  opacity: 0.45;
+  z-index: -1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
   position: fixed;
   top: 10px;
@@ -21,7 +60,6 @@
   font-weight: bold;
 }
 
-/* NAV LIST */
 .nav-links ul {
   list-style: none;
   display: flex;
@@ -31,8 +69,6 @@
   padding: 0;
 }
 
-/* LINKS */
-/* LINKS */
 .nav-links a {
   position: relative;
   text-decoration: none;
@@ -40,10 +76,10 @@
   font-size: 14px;
   font-weight: 500;
   padding-bottom: 6px;
+
   transition: opacity 0.3s ease;
 }
 
-/* UNDERLINE */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -55,37 +91,36 @@
   height: 3px;
 
   background: rgb(1, 150, 1);
-
   transition: width 0.3s ease;
 }
 
-/* HOVER ANIMATION */
 .nav-links a:hover::after {
   width: 100%;
 }
 
-/* ACTIVE LINK */
 .nav-links a.active-nav::after {
   width: 100%;
   transition: none;
 }
 
-/* HOVER EFFECT */
 .nav-links a:hover {
   opacity: 0.7;
 }
+
+/* =========================
+   CART
+========================= */
+
 .cart-wrapper {
   position: relative;
-  list-style: none;
 }
 
 .checkout-btn {
   display: inline-block;
 
   padding: 10px 18px;
-
   border: 2px solid black;
-  border-radius: 999px; /* makes it fully rounded */
+  border-radius: 999px;
 
   text-decoration: none;
   color: black;
@@ -95,19 +130,14 @@
 
   transition: 0.2s ease;
 }
-.checkout-btn::after {
-  display: none;
-}
+
 .checkout-btn:hover {
   background: black;
   color: white;
-  
 }
 
-/* HIDDEN BY DEFAULT */
 .cart-overlay {
   position: absolute;
-
   top: 140%;
   right: 0;
 
@@ -121,96 +151,103 @@
 
   opacity: 0;
   visibility: hidden;
-
   transform: translateY(-10px);
 
   transition: 0.3s ease;
 }
 
-/* SHOW */
 .cart-overlay.active {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
-body {
-  height: 100%;
-  margin: 0;
-  font-family: "Special Gothic Expanded One", sans-serif;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  background-color:black;
-  overflow-x: hidden;
-}
 
-.background-image {
-  position: fixed;
-  inset: 0;
-
-  background-image: url("../images/merchphotos/merchbg.png");
-  background-size: 150%;
-  background-position: center;
-
-  opacity: 0.45;
-
-  z-index: -1;
-}
+/* =========================
+   MAIN
+========================= */
 
 .main {
   padding: 5vh 20px;
   width: 70%;
-  margin: 0 auto;  /* THIS is the missing piece */
+  margin: 0 auto;
   flex: 1;
 }
 
 .bundle {
-    width: 900px;
-    height: auto;
-     display: block;
+  width: 900px;
+  height: auto;
+
+  display: block;
   margin: 0 auto;
   padding-top: 75px;
 }
-.merch-1 {
-    width: 215px;
-    height: auto;
-  padding: 10px;
+
+/* =========================
+   GRID
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  column-gap: 100px;
+  row-gap: 40px;
+
+  width: 100%;
+  margin: 0;
+  padding: 60px 0;
 }
+
+/* =========================
+   ITEM
+========================= */
+
+.item {
+  width: 100%;
+  height: 400px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+}
+
+.item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  
+}
+
+/* =========================
+   IMAGE SYSTEM (FIXED CLEAN VERSION)
+========================= */
+
 .img-container {
   position: relative;
   width: 100%;
   max-width: 250px;
-  aspect-ratio: 1 / 1; /* VERY IMPORTANT */
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: #000; /* optional, prevents white flash */
+  margin-top: 10px;
 }
 
-/* both images fully covering container */
-.merch-img1,
-.merch-img2 {
+.img-container img {
   position: absolute;
-  inset: 0; /* replaces top/left/right/bottom */
+  inset: 0;
+
   width: 100%;
   height: 100%;
   object-fit: cover;
 
   transition: opacity 0.3s ease;
 }
-.single-img {
-  position: absolute;
-  inset: 0;
 
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* default */
-.merch-img1 {
-  opacity: 1;
-}
-
-/* hover */
 .merch-img2 {
   opacity: 0;
 }
@@ -223,63 +260,55 @@ body {
   opacity: 1;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  column-gap: 100px;
-  row-gap: 40px;
-
-  width: 100%;        /* controls how wide the whole grid is */
-  margin: 0;    /* centers it on the page */
-
-  padding: 60px 0;   /* removes side padding confusion */
-}
-
-.item {
-    width: 100%;
-    height: 400px;
-  background: #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  padding: 10px;
-}
+/* =========================
+   TEXT
+========================= */
 
 .text-items {
   color: white;
   font-size: 13px;
 }
 
-.footer {
-  width: 100%; /* NEW */
+/* =========================
+   FOOTER
+========================= */
 
+.footer {
+  width: 100%;
   background-color: #fa538b;
-  padding: 80px 40px; /* CHANGED (was smaller padding) */
+
+  padding: 80px 40px;
   color: white;
+
+  position: relative;
+  z-index: 10;
 }
+
 .footer-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: start;
+
   gap: 90px;
 }
+
 .footer h2 {
   font-size: clamp(16px, 1.2vw, 20px);
-  font-family: "Special Gothic Expanded One", sans-serif;
 }
+
 .footer p {
   margin: 5px 0;
   font-family: "Poppins", sans-serif;
   font-size: clamp(10px, 1vw, 16px);
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-logo-img {
@@ -287,32 +316,7 @@ body {
   height: auto;
   display: block;
 }
-.footer-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer-column,
-.footer-logo {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-
-
-
-.footer {
-  position: relative;
-  z-index: 10;
-}
-
-html, body {
-  margin: 0;
-  min-height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
+.product-link {
+  display: block;
+  height: 100%;
 }
