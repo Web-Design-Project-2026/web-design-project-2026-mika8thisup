@@ -8,6 +8,7 @@
     <title>WorkingTitleForNow</title>
     <!--link to css file-->
     <link rel="stylesheet" href="cssfiles/checkout.css" />
+    <script src="jsfiles/checkout.js" defer></script>
     <!--Special gothic expanded one-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,19 +38,41 @@
     <header class="navbar">
       <div class="logo">ASTR3LA</div>
       <nav class="nav-links">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#" class="active-nav">Merch</a></li>
-          <li><a href="#">Cart</a></li>
-          <li><a href="#">Tour</a></li>
-        </ul>
-      </nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="merch.html">Merch</a></li>
+
+    <!-- CART -->
+    <li class="cart-wrapper">
+
+  <a href="#" class="cart-btn">Cart</a>
+
+  <div class="cart-overlay">
+    <h3>Your Cart</h3>
+
+    <p>Black Hoodie</p>
+    <p>Vinyl Record</p>
+
+    <a href="checkout.html" class="checkout-btn">Checkout</a>
+  </div>
+
+</li>
+
+    <li><a href="#">Tour</a></li>
+  </ul>
+</nav>
     </header>
-    <main>
-    <H1 class="body">Checkout<H1>
+    <div class="layout">
 
-     </main>
+  <main class="main-content">
+    Main content
+  </main>
 
+  <aside class="sidebar">
+    Aside content
+  </aside>
+
+</div>
     <!-- END page-container -->
     <!--to da left! aboutus etc-->
     <footer class="footer">

@@ -74,6 +74,65 @@
 .nav-links a:hover {
   opacity: 0.7;
 }
+.cart-wrapper {
+  position: relative;
+  list-style: none;
+}
+
+.checkout-btn {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  border: 2px solid black;
+  border-radius: 999px; /* makes it fully rounded */
+
+  text-decoration: none;
+  color: black;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.2s ease;
+}
+.checkout-btn::after {
+  display: none;
+}
+.checkout-btn:hover {
+  background: black;
+  color: white;
+  
+}
+
+/* HIDDEN BY DEFAULT */
+.cart-overlay {
+  position: absolute;
+
+  top: 140%;
+  right: 0;
+
+  width: 250px;
+
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-10px);
+
+  transition: 0.3s ease;
+}
+
+/* SHOW */
+.cart-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
 body {
   height: 100%;
@@ -93,7 +152,37 @@ body {
   flex: 1;
 }
 
+.layout {
+  display: flex;
+  gap: 20px;
 
+  width: 90%;
+  margin: 40px auto;
+}
+
+/* MAIN */
+.main-content {
+  flex: 3;
+
+  background: lightgray;
+  min-height: 400px;
+
+  padding: 20px;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+
+/* ASIDE */
+.sidebar {
+  flex: 1;
+
+  background: #9ced48;
+  min-height: 400px;
+
+  padding: 20px;
+  margin-top: 100px;
+  border-radius: 10px;
+}
 
 
 
