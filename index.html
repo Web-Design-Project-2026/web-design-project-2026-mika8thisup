@@ -8,6 +8,7 @@
     <title>WorkingTitleForNow</title>
     <!--link to css file-->
     <link rel="stylesheet" href="cssfiles/LandingPage.css" />
+    <script src="JavaScript/carousel.js" defer></script>
     <!--Special gothic expanded one-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,22 +49,27 @@
     </header>
 
     <main class="hero-section">
-      <!--main image/video loop grej-->
-     <div class="carousel">
-  <div class="slides">
-    <img class="slide.active" src="images/carousel/carousel1.png" />
-    <img class="slide" src="images/carousel/carousel2.png" />
-    <img class="slide" src="images/carousel/SpecialBundleCarousel.png" />
-  </div>
-
-  <button class="prev">‹</button>
-  <button class="next">›</button>
-</div>
-
-        <!--buttons for the carosel-->
-        <button class="prev">‹</button>
-        <button class="next">›</button>
+  <div class="hero-content">
+    <div class="sliderContainer">
+      <!--controles-->
+      <div class="controls">
+        <div class="prev">‹</div>
+        <div class="next">›</div>
       </div>
+
+      <!--slider-->
+      <div class="slider">
+     <div class="slide active">
+      <img src="images/carousel/carousel1.png" alt="slide 1">
+     </div>
+      <div class="slide">
+        <img src="images/carousel/carousel2.png" alt="slide 2">
+      </div>
+      <div class="slide">
+        <img src="images/carousel/SpecialBundleCarousel.png" alt="slide 3">
+      </div>
+      </div>
+    </div>
     </main>
     <!-- END page-container -->
     <!--to da left! aboutus etc-->
@@ -96,6 +102,5 @@
         </div>
       </div>
     </footer>
-    <script src="jsfiles/carousel.js"></script>
   </body>
 </html>
