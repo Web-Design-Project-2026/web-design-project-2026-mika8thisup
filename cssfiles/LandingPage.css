@@ -13,6 +13,9 @@ body {
 .hero-section {
   min-height: 75vh;
 }
+.page-spacer {
+  height: 50px;
+}
 .background-text {
   position: fixed;
   inset: 0;
@@ -44,7 +47,6 @@ body {
   font-weight: bold;
 }
 
-/* NAV LIST */
 .nav-links ul {
   list-style: none;
   display: flex;
@@ -54,7 +56,6 @@ body {
   padding: 0;
 }
 
-/* LINKS */
 .nav-links a {
   text-decoration: none;
   color: black;
@@ -62,7 +63,6 @@ body {
   font-weight: 500;
 }
 
-/* HOVER EFFECT */
 .nav-links a:hover {
   opacity: 0.7;
 }
@@ -108,63 +108,89 @@ body {
   flex-direction: column;
   gap: 5px;
 }
-.carousel {
-  position: relative;
-  height: 75vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.slides {
+.sliderContainer {
   position: relative;
-  width: 50%;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: visible;
+  padding-bottom: 100px;
+}
+
+.controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 50;
+}
+
+.prev-button,
+.next-button {
+  cursor: pointer;
+  font-size: 42px;
+  color: white;
+  padding: 20px;
+  user-select: none;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
   height: 100%;
 }
 
 .slide {
   position: absolute;
-
-  width: 250px;
-  max-width: 250px;
-
-  height: auto;
-
-  object-fit: contain;
+  top: 65%;
+  left: 50%;
+  width: 70%;
 
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transform: translate(-50%, -50%) scale(0.7);
 
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 20px;
   display: block;
 }
 
-.slide.active {
+.active-slide {
   opacity: 1;
-}
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 24px;
+  z-index: 10;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
 }
 
-.prev {
-  left: 20px;
+.prev-slide {
+  opacity: 0.5;
+  z-index: 5;
+  transform: translate(-120%, -50%) scale(0.85);
+  pointer-events: auto;
 }
 
-.next {
-  right: 20px;
+.next-slide {
+  opacity: 0.5;
+  z-index: 5;
+  transform: translate(20%, -50%) scale(0.85);
+  pointer-events: auto;
 }
 
-.img {
-  max-width: 100%;
+.prev-slide:hover {
+  opacity: 0.8;
+  transform: translate(-130%, -50%) scale(0.9) rotate(-2deg);
+}
+
+.next-slide:hover {
+  opacity: 0.8;
+  transform: translate(30%, -50%) scale(0.9) rotate(2deg);
 }

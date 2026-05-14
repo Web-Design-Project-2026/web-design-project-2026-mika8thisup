@@ -1,80 +1,59 @@
+console.log("🔥 carousel JS is running");
+
+document.addEventListener("DOMContentLoaded", startup);
+
 function startup() {
   slider(".slider");
 }
 
-document.addEventListener("DOMContentLoaded", startup);
-
-let currentIndex = 0;
-
 function slider(selector) {
   const parent = document.querySelector(selector);
-  if (!parent) return;
-
   const slides = parent.querySelectorAll(".slide");
-  const nextBtn = document.querySelector(".next-button");
-  const prevBtn = document.querySelector(".prev-button");
 
-  function updateSlides() {
+  let currentIndex = 0;
+  let autoplay;
+
+  function update() {
     slides.forEach((s) => {
       s.classList.remove("active-slide", "prev-slide", "next-slide");
     });
 
+    const prev = (currentIndex - 1 + slides.length) % slides.length;
+    const next = (currentIndex + 1) % slides.length;
+
     slides[currentIndex].classList.add("active-slide");
-
-    if (slides[currentIndex - 1]) {
-      slides[currentIndex - 1].classList.add("prev-slide");
-    }
-
-    if (slides[currentIndex + 1]) {
-      slides[currentIndex + 1].classList.add("next-slide");
-    }
+    slides[prev].classList.add("prev-slide");
+    slides[next].classList.add("next-slide");
   }
 
   function next_slide() {
-    if (currentIndex < slides.length - 1) {
-      currentIndex++;
-      updateSlides();
-    }
+    currentIndex = (currentIndex + 1) % slides.length;
+    update();
   }
 
   function prev_slide() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSlides();
-    }
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    update();
   }
 
-  // INIT
-  updateSlides();
+  update();
 
-  // BUTTONS
-  nextBtn?.addEventListener("click", next_slide);
-  prevBtn?.addEventListener("click", prev_slide);
+  document.querySelector(".next-button")?.addEventListener("click", next_slide);
 
-  // KEYBOARD
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") prev_slide();
-    if (event.key === "ArrowRight") next_slide();
+  document.querySelector(".prev-button")?.addEventListener("click", prev_slide);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") next_slide();
+    if (e.key === "ArrowLeft") prev_slide();
   });
 
-  // OPTIONAL: swipe (simplified version of yours)
-  let startX = null;
+  autoplay = setInterval(next_slide, 5000);
 
-  parent.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
+  parent.addEventListener("mouseenter", () => {
+    clearInterval(autoplay);
   });
 
-  parent.addEventListener("touchend", (e) => {
-    if (startX === null) return;
-
-    let endX = e.changedTouches[0].clientX;
-    let diff = startX - endX;
-
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) next_slide();
-      else prev_slide();
-    }
-
-    startX = null;
+  parent.addEventListener("mouseleave", () => {
+    autoplay = setInterval(next_slide, 5000);
   });
 }
