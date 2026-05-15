@@ -1,8 +1,5 @@
-/* =========================
-   BODY
-========================= */
-
-html, body {
+html,
+body {
   margin: 0;
   min-height: 100%;
 }
@@ -17,10 +14,6 @@ body {
   position: relative;
 }
 
-/* =========================
-   BACKGROUND
-========================= */
-
 .background-image {
   position: fixed;
   inset: 0;
@@ -32,10 +25,6 @@ body {
   opacity: 0.45;
   z-index: -1;
 }
-
-/* =========================
-   NAVBAR
-========================= */
 
 .navbar {
   position: fixed;
@@ -98,7 +87,6 @@ body {
   width: 100%;
 }
 
-
 .nav-links ul li > a.active-nav::after {
   width: 100%;
   transition: none;
@@ -107,10 +95,6 @@ body {
 .nav-links a:hover {
   opacity: 0.7;
 }
-
-/* =========================
-   CART
-========================= */
 
 .cart-wrapper {
   position: relative;
@@ -148,7 +132,7 @@ body {
   padding: 20px;
   border-radius: 16px;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
   opacity: 0;
   visibility: hidden;
@@ -162,10 +146,6 @@ body {
   visibility: visible;
   transform: translateY(0);
 }
-
-/* =========================
-   MAIN
-========================= */
 
 .main {
   padding: 5vh 20px;
@@ -183,10 +163,6 @@ body {
   padding-top: 75px;
 }
 
-/* =========================
-   GRID
-========================= */
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -198,10 +174,6 @@ body {
   margin: 0;
   padding: 60px 0;
 }
-
-/* =========================
-   ITEM
-========================= */
 
 .item {
   width: 100%;
@@ -222,12 +194,7 @@ body {
   display: block;
   text-decoration: none;
   color: inherit;
-  
 }
-
-/* =========================
-   IMAGE SYSTEM (FIXED CLEAN VERSION)
-========================= */
 
 .img-container {
   position: relative;
@@ -261,18 +228,30 @@ body {
   opacity: 1;
 }
 
-/* =========================
-   TEXT
-========================= */
-
 .text-items {
   color: white;
   font-size: 13px;
 }
+.text-items {
+  color: white;
+  margin-top: 14px;
+}
 
-/* =========================
-   FOOTER
-========================= */
+.item-title {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: #ffffff;
+}
+
+.item-description {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
 
 .footer {
   width: 100%;
@@ -320,4 +299,6 @@ body {
 .product-link {
   display: block;
   height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
