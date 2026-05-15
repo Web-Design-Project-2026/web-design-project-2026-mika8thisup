@@ -133,16 +133,38 @@
   visibility: visible;
   transform: translateY(0);
 }
+.cart-backdrop {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  display: none;
+  z-index: 999;
+}
 
+.cart-backdrop.active {
+  display: block;
+}
+.cart-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+
+  background: none;
+  border: none;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  color: black;
+  z-index: 10;
+}
 body {
-  height: 100%;
   margin: 0;
+  min-height: 100%;
   font-family: "Special Gothic Expanded One", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: relative;
-  background-color:black;
+  background-color: black;
   overflow-x: hidden;
 }
 

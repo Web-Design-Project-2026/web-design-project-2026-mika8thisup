@@ -8,7 +8,7 @@
     <title>WorkingTitleForNow</title>
     <!--link to css file-->
     <link rel="stylesheet" href="cssfiles/Productpage.css" />
-    <script src="jsfiles/checkout.js" defer></script>
+    <script src="jsfiles/cart.js" defer></script>
     <!--Special gothic expanded one-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,24 +41,33 @@
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="merch.html">Merch</a></li>
+    <li><a href="#">Tour</a></li>
 
     <!-- CART -->
     <li class="cart-wrapper">
 
-  <a href="#" class="cart-btn">Cart</a>
+      <a href="#" class="cart-btn">
+        Cart <span class="cart-count">0</span>
+      </a>
 
-  <div class="cart-overlay">
-    <h3>Your Cart</h3>
+      <!-- BACKDROP -->
+      <div class="cart-backdrop"></div>
 
-    <p>Black Hoodie</p>
-    <p>Vinyl Record</p>
+      <!-- CART DROPDOWN -->
+      <div class="cart-overlay">
 
-    <a href="checkout.html" class="checkout-btn">Checkout</a>
-  </div>
+        <!-- X CLOSE BUTTON -->
+        <button class="cart-close">✕</button>
 
-</li>
+        <h3>Your Cart</h3>
 
-    <li><a href="#">Tour</a></li>
+        <div class="cart-items"></div>
+
+        <a href="checkout.html" class="checkout-btn">Checkout</a>
+
+      </div>
+
+    </li>
   </ul>
 </nav>
     </header>
@@ -70,6 +79,13 @@
   <div class="text-content">
     Main content
   </div>
+  <button class="add-to-cart"
+  data-id="pink-hoodie"
+  data-name="Pink Hoodie"
+  data-price="499"
+  data-image="images/merchphotos/PinkRF.png">
+  Add to cart
+</button>
 </main>
 
 </div>

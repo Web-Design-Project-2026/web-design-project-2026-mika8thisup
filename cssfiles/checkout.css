@@ -193,20 +193,19 @@ body {
 }
 
 .footer {
-  width: 100%; /* NEW */
-
   background-color: #fa538b;
-  padding: 80px 40px; /* CHANGED (was smaller padding) */
+  padding: 20px 40px;
   color: white;
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
 }
 .footer-container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: start;
-  gap: 90px;
+  gap: 40px;
 }
 .footer h2 {
   font-size: clamp(16px, 1.2vw, 20px);
@@ -235,20 +234,129 @@ body {
   gap: 5px;
 }
 
-
-
-
-.footer {
+.sliderContainer {
   position: relative;
-  z-index: 10;
-}
-
-html, body {
-  margin: 0;
-  min-height: 100%;
-}
-
-body {
+  width: 100%;
+  height: 75vh;
   display: flex;
-  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: visible;
+  padding-bottom: 100px;
+}
+
+.controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 50;
+}
+
+.prev-button,
+.next-button {
+  cursor: pointer;
+  font-size: 42px;
+  color: white;
+  padding: 20px;
+  user-select: none;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  width: 70%;
+
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+.active-slide {
+  opacity: 1;
+  z-index: 10;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+  box-shadow: 0 120px 120px rgba(0, 0, 0, 1);
+}
+
+.prev-slide {
+  opacity: 0.9;
+  z-index: 5;
+  transform: translate(-120%, -50%) scale(0.85);
+  pointer-events: auto;
+}
+
+.next-slide {
+  opacity: 0.9;
+  z-index: 5;
+  transform: translate(20%, -50%) scale(0.85);
+  pointer-events: auto;
+}
+
+.prev-slide:hover {
+  opacity: 0.8;
+  transform: translate(-130%, -50%) scale(0.9) rotate(-2deg);
+}
+
+.next-slide:hover {
+  opacity: 0.8;
+  transform: translate(30%, -50%) scale(0.9) rotate(2deg);
+}
+
+.slide {
+  cursor: pointer;
+}
+
+.slide img {
+  transition: transform 0.3s ease;
+}
+
+.active-slide img:hover {
+  transform: scale(1.03);
+}
+
+.cart-count {
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.qty-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.qty-controls button {
+  padding: 2px 6px;
+}
+
+.remove-btn {
+  margin-top: 5px;
+  font-size: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red;
 }
