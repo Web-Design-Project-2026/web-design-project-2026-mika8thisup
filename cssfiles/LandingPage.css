@@ -195,3 +195,15 @@ body {
   opacity: 0.8;
   transform: translate(30%, -50%) scale(0.9) rotate(2deg);
 }
+
+.slide {
+  cursor: pointer;
+}
+
+.slide img {
+  transition: transform 0.3s ease;
+}
+
+.active-slide img:hover {
+  transform: scale(1.03);
+}
