@@ -84,11 +84,16 @@ cartBtn.addEventListener("click", (e) => {
 
 /* CLOSE WHEN CLICKING OUTSIDE */
 document.addEventListener("click", (e) => {
-
   const clickedInside = cartWrapper.contains(e.target);
 
   if (!clickedInside) {
     cartOverlay.classList.remove("active");
   }
+});
 
+const toggle = document.querySelector(".menu-toggle");
+const navbar = document.querySelector(".navbar");
+
+toggle.addEventListener("click", () => {
+  navbar.classList.toggle("active");
 });
