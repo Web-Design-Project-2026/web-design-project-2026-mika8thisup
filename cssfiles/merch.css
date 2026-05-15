@@ -80,7 +80,7 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.nav-links a::after {
+.nav-links ul li > a::after {
   content: "";
   position: absolute;
 
@@ -94,11 +94,12 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links ul li > a:hover::after {
   width: 100%;
 }
 
-.nav-links a.active-nav::after {
+
+.nav-links ul li > a.active-nav::after {
   width: 100%;
   transition: none;
 }
