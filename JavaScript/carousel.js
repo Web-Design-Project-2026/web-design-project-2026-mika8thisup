@@ -13,8 +13,8 @@ function slider(selector) {
   let currentIndex = 0;
   let autoplay;
 
-  // PRODUCT PAGE LINKS
-  const links = ["product1.html", "product2.html", "product3.html"];
+  // product page links//
+  const links = ["SpecialBundle.html", "Carousel1.html", "Carousel2.html"];
 
   function update() {
     slides.forEach((s) => {
