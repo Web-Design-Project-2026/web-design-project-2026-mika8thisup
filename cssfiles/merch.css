@@ -72,7 +72,6 @@ body {
 .nav-links ul li > a::after {
   content: "";
   position: absolute;
-
   left: 0;
   bottom: 0;
 
@@ -87,13 +86,14 @@ body {
   width: 100%;
 }
 
-.nav-links ul li > a.active-nav::after {
-  width: 100%;
-  transition: none;
-}
-
 .nav-links a:hover {
   opacity: 0.7;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 .cart-wrapper {
@@ -102,17 +102,13 @@ body {
 
 .checkout-btn {
   display: inline-block;
-
   padding: 10px 18px;
   border: 2px solid black;
   border-radius: 999px;
-
   text-decoration: none;
   color: black;
-
   font-size: 14px;
   font-weight: 500;
-
   transition: 0.2s ease;
 }
 
@@ -155,17 +151,17 @@ body {
 }
 
 .bundle {
-  width: 900px;
+  width: 90%;
   height: auto;
-
   display: block;
   margin: 0 auto;
-  padding-top: 75px;
+  padding-top: 10vh;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 250px);
+  justify-content: center;
 
   column-gap: 100px;
   row-gap: 40px;
@@ -179,19 +175,16 @@ body {
   width: 100%;
   height: 400px;
   background: #000;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+
   overflow: hidden;
   padding: 10px;
   box-sizing: border-box;
-  text-decoration: none;
-  color: inherit;
-}
 
-.item a {
-  display: block;
   text-decoration: none;
   color: inherit;
 }
@@ -200,9 +193,12 @@ body {
   position: relative;
   width: 100%;
   max-width: 250px;
-  aspect-ratio: 1 / 1;
+  height: 250px;
+
   overflow: hidden;
   margin-top: 10px;
+
+  flex-shrink: 0;
 }
 
 .img-container img {
@@ -212,8 +208,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 
-  transition: opacity 0.3s ease;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .merch-img2 {
@@ -229,66 +227,47 @@ body {
 }
 
 .text-items {
-  color: white;
-  font-size: 13px;
-}
-.text-items {
-  color: white;
-  margin-top: 14px;
+  padding-top: 30px;
 }
 
 .item-title {
-  margin: 0 0 6px 0;
+  margin: 20px 0 6px;
   font-size: 13px;
   letter-spacing: 1px;
-  font-family: "Special Gothic Expanded One", sans-serif;
-  color: #ffffff;
+  color: #fff;
 }
 
 .item-description {
-  margin: 0;
+  margin: 10px 0 0;
   font-size: 12px;
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  color: #ffffff;
+  color: #fff;
 }
 
 .footer {
-  width: 100%;
   background-color: #fa538b;
-
-  padding: 80px 40px;
+  padding: 20px 40px;
   color: white;
-
+  margin-top: auto;
   position: relative;
   z-index: 10;
 }
-
 .footer-container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
-  gap: 90px;
+  align-items: start;
+  gap: 40px;
 }
-
 .footer h2 {
   font-size: clamp(16px, 1.2vw, 20px);
+  font-family: "Special Gothic Expanded One", sans-serif;
 }
-
 .footer p {
   margin: 5px 0;
   font-family: "Poppins", sans-serif;
   font-size: clamp(10px, 1vw, 16px);
-}
-
-.footer-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .footer-logo-img {
@@ -296,9 +275,46 @@ body {
   height: auto;
   display: block;
 }
-.product-link {
-  display: block;
-  height: 100%;
-  text-decoration: none;
-  color: inherit;
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-column,
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 250px);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(1, 250px);
+  }
+}
+
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links ul {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+
+    background: #9ced48;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .navbar.active .nav-links ul {
+    display: flex;
+  }
 }
