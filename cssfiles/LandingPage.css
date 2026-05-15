@@ -30,10 +30,6 @@ body {
   pointer-events: none;
 }
 
-/* =========================
-   NAVBAR
-========================= */
-
 .navbar {
   position: fixed;
   top: 10px;
@@ -94,21 +90,14 @@ body {
   width: 100%;
 }
 
-
 .nav-links ul li > a.active-nav::after {
   width: 100%;
   transition: none;
 }
 
-
-
 .nav-links a:hover {
   opacity: 0.7;
 }
-
-/* =========================
-   CART
-========================= */
 
 .cart-wrapper {
   position: relative;
@@ -130,7 +119,6 @@ body {
   transition: 0.2s ease;
 }
 
-
 .checkout-btn:hover {
   background: black;
   color: white;
@@ -147,7 +135,7 @@ body {
   padding: 20px;
   border-radius: 16px;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
   opacity: 0;
   visibility: hidden;
@@ -211,8 +199,9 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  overflow: visible;
+  overflow: hidden;
   padding-bottom: 100px;
+  margin-top: 8vh;
 }
 
 .controls {
@@ -249,7 +238,7 @@ body {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.7);
 
-  transition: all 0.5s ease;
+  transition: all 0.7s ease;
   pointer-events: none;
 }
 
@@ -264,11 +253,11 @@ body {
   z-index: 10;
   transform: translate(-50%, -50%) scale(1);
   pointer-events: auto;
-  box-shadow: 0 120px 120px rgba(0, 0, 0, 1);
+  box-shadow: 0 0px 120px rgb(26, 26, 26);
 }
 
 .prev-slide {
-  opacity: 0.9;
+  opacity: 0.8;
   z-index: 5;
   transform: translate(-120%, -50%) scale(0.85);
   pointer-events: auto;
@@ -297,6 +286,15 @@ body {
 
 .slide img {
   transition: transform 0.3s ease;
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+
+  transition: transform 0.3s ease;
+
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .active-slide img:hover {
