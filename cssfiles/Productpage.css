@@ -1,0 +1,256 @@
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #9ced48;
+  padding: 15px 24px;
+  border-radius: 5px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* NAV LIST */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* LINKS */
+/* LINKS */
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 6px;
+  transition: opacity 0.3s ease;
+}
+
+/* UNDERLINE */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0%;
+  height: 3px;
+
+  background: rgb(1, 150, 1);
+
+  transition: width 0.3s ease;
+}
+
+/* HOVER ANIMATION */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE LINK */
+.nav-links a.active-nav::after {
+  width: 100%;
+  transition: none;
+}
+
+/* HOVER EFFECT */
+.nav-links a:hover {
+  opacity: 0.7;
+}
+.cart-wrapper {
+  position: relative;
+  list-style: none;
+}
+
+.checkout-btn {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  border: 2px solid black;
+  border-radius: 999px; /* makes it fully rounded */
+
+  text-decoration: none;
+  color: black;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.2s ease;
+}
+.checkout-btn::after {
+  display: none;
+}
+.checkout-btn:hover {
+  background: black;
+  color: white;
+  
+}
+
+/* HIDDEN BY DEFAULT */
+.cart-overlay {
+  position: absolute;
+
+  top: 140%;
+  right: 0;
+
+  width: 250px;
+
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-10px);
+
+  transition: 0.3s ease;
+}
+
+/* SHOW */
+.cart-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color:black;
+  overflow-x: hidden;
+}
+
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  margin: 40px auto;
+}
+
+/* MAIN */
+.main-content {
+  width: 800px;
+  max-width: 100%;
+  background: lightgray;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-items {
+  color: white;
+  font-size: 13px;
+}
+
+.product-image {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.text-content {
+  flex: 1;
+}
+.footer {
+  width: 100%; /* NEW */
+
+  background-color: #fa538b;
+  padding: 80px 40px; /* CHANGED (was smaller padding) */
+  color: white;
+}
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  gap: 90px;
+}
+.footer h2 {
+  font-size: clamp(16px, 1.2vw, 20px);
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+.footer p {
+  margin: 5px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(10px, 1vw, 16px);
+}
+
+.footer-logo-img {
+  width: 50%;
+  height: auto;
+  display: block;
+}
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-column,
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+
+
+.footer {
+  position: relative;
+  z-index: 10;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+.layout {
+  border: 2px solid red;
+}
+
+.main-content {
+  border: 2px solid blue;
+}
