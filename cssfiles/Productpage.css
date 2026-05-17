@@ -332,10 +332,3 @@ html, body {
   min-height: 100%;
 }
 
-.layout {
-  border: 2px solid red;
-}
-
-.main-content {
-  border: 2px solid blue;
-}

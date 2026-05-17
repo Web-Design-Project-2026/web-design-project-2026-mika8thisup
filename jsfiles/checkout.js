@@ -42,3 +42,33 @@ function renderCheckout() {
   }
 }
 renderCheckout();
+
+const placeOrderBtn = document.getElementById("placeOrderBtn");
+const orderToast = document.getElementById("orderToast");
+
+if (placeOrderBtn) {
+  placeOrderBtn.addEventListener("click", () => {
+
+    // clear all inputs
+    document.querySelectorAll(".form-group input").forEach(input => {
+      input.value = "";
+    });
+
+    // optional: clear cart
+    sessionStorage.removeItem("cart");
+
+    // refresh cart UI
+    renderCart();
+    renderCheckout();
+    updateCartCount();
+
+    // show toast
+    orderToast.classList.add("active");
+
+    // hide after 3 sec
+    setTimeout(() => {
+      orderToast.classList.remove("active");
+    }, 3000);
+
+  });
+}
