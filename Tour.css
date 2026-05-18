@@ -1,0 +1,48 @@
+.tour-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tour-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: white;
+}
+
+.tour-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tour-date {
+  font-family: "Orbitron", sans-serif;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.tour-location {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.tour-btn {
+  padding: 8px 16px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tour-btn:hover {
+  background: white;
+  color: black;
+}
