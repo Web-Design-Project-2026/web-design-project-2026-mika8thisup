@@ -97,3 +97,24 @@ const navbar = document.querySelector(".navbar");
 toggle.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });
+
+const newsletterForm = document.querySelector(".newsletter-form");
+const orderToast = document.getElementById("orderToast");
+
+if (newsletterForm) {
+  newsletterForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const emailInput = newsletterForm.querySelector(".newsletter-input");
+
+    if (!emailInput.value.trim()) return;
+
+    emailInput.value = "";
+
+    orderToast.classList.add("active");
+
+    setTimeout(() => {
+      orderToast.classList.remove("active");
+    }, 3000);
+  });
+}

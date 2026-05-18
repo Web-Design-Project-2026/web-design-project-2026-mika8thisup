@@ -255,6 +255,43 @@ body {
   transform: scale(1);
   cursor: pointer;
 }
+.place-order-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.place-order-btn:hover {
+  opacity: 0.85;
+}
+.order-toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: black;
+  color: white;
+  padding: 16px 22px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+.order-toast.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 .footer {
   background-color: #fa538b;
   padding: 20px 40px;
