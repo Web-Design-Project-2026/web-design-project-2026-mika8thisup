@@ -69,31 +69,3 @@ function slider(selector) {
     });
   });
 }
-
-/*Cart logic*/
-const cartBtn = document.querySelector(".cart-btn");
-const cartOverlay = document.querySelector(".cart-overlay");
-const cartWrapper = document.querySelector(".cart-wrapper");
-
-/* TOGGLE CART */
-cartBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  cartOverlay.classList.toggle("active");
-});
-
-/* CLOSE WHEN CLICKING OUTSIDE */
-document.addEventListener("click", (e) => {
-  const clickedInside = cartWrapper.contains(e.target);
-
-  if (!clickedInside) {
-    cartOverlay.classList.remove("active");
-  }
-});
-
-const toggle = document.querySelector(".menu-toggle");
-const navbar = document.querySelector(".navbar");
-
-toggle.addEventListener("click", () => {
-  navbar.classList.toggle("active");
-});

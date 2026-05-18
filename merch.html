@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WorkingTitleForNow</title>
 
-    <link rel="stylesheet" href="/cssfiles/merch.css" />
-    <script src="JavaScript/checkout.js" defer></script>
+    <link rel="stylesheet" href="cssfiles/merch.css" />
+    <script src="jsfiles/cart.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,15 +32,22 @@
       <nav class="nav-links">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="merch.html">Merch</a></li>
+          <li><a href="merch.html" class="active-nav">Merch</a></li>
           <li><a href="#">Tour</a></li>
 
           <li class="cart-wrapper">
-            <a href="#" class="cart-btn">Cart</a>
+            <a href="#" class="cart-btn">
+              Cart <span class="cart-count">0</span>
+            </a>
+
+            <div class="cart-backdrop"></div>
+
             <div class="cart-overlay">
+              <button class="cart-close">✕</button>
+
               <h3>Your Cart</h3>
-              <p>Black Hoodie</p>
-              <p>Vinyl Record</p>
+              <div class="cart-items"></div>
+
               <a href="checkout.html" class="checkout-btn">Checkout</a>
             </div>
           </li>
