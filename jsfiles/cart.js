@@ -40,13 +40,13 @@ document.querySelectorAll(".add-to-cart").forEach((btn) => {
       name: btn.dataset.name,
       price: Number(btn.dataset.price),
       image: btn.dataset.image,
+      size: document.querySelector("#size")?.value || "",
       quantity: 1,
     };
 
     let cart = getCart();
 
-    const existing = cart.find((p) => p.id === item.id);
-
+    const existing = cart.find((p) => p.id === item.id && p.size === item.size);
     if (existing) {
       existing.quantity += 1;
     } else {
@@ -110,6 +110,7 @@ function renderCart() {
 
         <div class="cart-item-name">
           ${item.name}
+           ${item.size ? `<div>Size: ${item.size}</div>` : ""}
         </div>
 
         <div class="cart-item-qty">
