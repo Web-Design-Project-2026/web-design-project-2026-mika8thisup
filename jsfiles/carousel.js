@@ -70,24 +70,6 @@ function slider(selector) {
   });
 }
 
-const cartBtn = document.querySelector(".cart-btn");
-const cartOverlay = document.querySelector(".cart-overlay");
-const cartWrapper = document.querySelector(".cart-wrapper");
-
-cartBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  cartOverlay.classList.toggle("active");
-});
-
-document.addEventListener("click", (e) => {
-  const clickedInside = cartWrapper.contains(e.target);
-
-  if (!clickedInside) {
-    cartOverlay.classList.remove("active");
-  }
-});
-
 const toggle = document.querySelector(".menu-toggle");
 const navbar = document.querySelector(".navbar");
 
