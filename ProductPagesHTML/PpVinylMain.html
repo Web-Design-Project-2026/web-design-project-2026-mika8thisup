@@ -5,7 +5,7 @@
     <!--meta info, title, links to css and fonts-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WorkingTitleForNow</title>
+    <title>ASTR3LA vinyl</title>
     <!--link to css file-->
     <link rel="stylesheet" href="../cssfiles/Productpage.css" />
     <script src="../jsfiles/cart.js" defer></script>
@@ -39,81 +39,65 @@
     <header class="navbar">
       <div class="logo">ASTR3LA</div>
       <nav class="nav-links">
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../merch.html">Merch</a></li>
-    <li><a href="#">Tour</a></li>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../merch.html">Merch</a></li>
+          <li><a href="#">Tour</a></li>
 
-    <!-- CART -->
-    <li class="cart-wrapper">
+          <!-- CART -->
+          <li class="cart-wrapper">
+            <a href="#" class="cart-btn">
+              Cart <span class="cart-count">0</span>
+            </a>
 
-      <a href="#" class="cart-btn">
-        Cart <span class="cart-count">0</span>
-      </a>
+            <!-- BACKDROP -->
+            <div class="cart-backdrop"></div>
 
-      <!-- BACKDROP -->
-      <div class="cart-backdrop"></div>
+            <!-- CART DROPDOWN -->
+            <div class="cart-overlay">
+              <!-- X CLOSE BUTTON -->
+              <button class="cart-close">✕</button>
 
-      <!-- CART DROPDOWN -->
-      <div class="cart-overlay">
+              <h3>Your Cart</h3>
+              <div class="cart-items"></div>
 
-        <!-- X CLOSE BUTTON -->
-        <button class="cart-close">✕</button>
-
-        <h3>Your Cart</h3>
-        <div class="cart-items"></div>
-
-        <a href="../checkout.html" class="checkout-btn">Checkout</a>
-
-      </div>
-
-    </li>
-  </ul>
-</nav>
+              <a href="../checkout.html" class="checkout-btn">Checkout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
     <div class="layout">
+      <main class="main-content">
+        <div class="product-image-wrapper">
+          <img
+            src="../images/merchphotos/VinylMainFront.png"
+            class="product-image"
+            alt="Main Vinyl"
+          />
+        </div>
 
-  <main class="main-content">
+        <div class="product-info">
+          <h1 class="product-title">THE VINYL</h1>
 
-  <div class="product-image-wrapper">
+          <p class="product-description">
+            The classic vinyl for the album Oblivion of ASTR3LA.
+          </p>
 
-  <img
-    src="../images/merchphotos/VinylMainFront.png"
-    class="product-image"
-    alt="Main Vinyl"
-  >
+          <div class="product-price">399 SEK</div>
 
-  </div>
-
-  <div class="product-info">
-
-    <h1 class="product-title">
-      THE VINYL
-    </h1>
-
-    <p class="product-description">
-      The classic vinyl for the album Oblivion of ASTR3LA.
-    </p>
-
-    <div class="product-price">
-      399 SEK
+          <button
+            class="add-to-cart"
+            data-id="THE VINYL"
+            data-name="THE VINYL"
+            data-price="399"
+            data-image="../images/merchphotos/VinylMainFront.png"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </main>
     </div>
-
-    <button
-      class="add-to-cart"
-      data-id="THE VINYL"
-      data-name="THE VINYL"
-      data-price="399"
-      data-image="../images/merchphotos/VinylMainFront.png"
-    >
-      Add to Cart
-    </button>
-
-  </div>
-
-</main>
-
-</div>
     <!-- END page-container -->
     <!--to da left! aboutus etc-->
     <footer class="footer">

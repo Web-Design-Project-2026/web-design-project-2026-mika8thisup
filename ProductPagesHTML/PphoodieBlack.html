@@ -5,9 +5,9 @@
     <!--meta info, title, links to css and fonts-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WorkingTitleForNow</title>
+    <title>ASTR3LA Oblivion Hoodie</title>
     <!--link to css file-->
-    <link rel="stylesheet" href="../cssfiles/Productpage.css" />
+    <link rel="stylesheet" href="../ProductPagesCSS/Hoodie.css" />
     <script src="../jsfiles/cart.js" defer></script>
     <script src="../jsfiles/productpage.js" defer></script>
     <!--Special gothic expanded one-->
@@ -39,81 +39,74 @@
     <header class="navbar">
       <div class="logo">ASTR3LA</div>
       <nav class="nav-links">
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../merch.html">Merch</a></li>
-    <li><a href="#">Tour</a></li>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../merch.html">Merch</a></li>
+          <li><a href="#">Tour</a></li>
 
-    <!-- CART -->
-    <li class="cart-wrapper">
+          <!-- CART -->
+          <li class="cart-wrapper">
+            <a href="#" class="cart-btn">
+              Cart <span class="cart-count">0</span>
+            </a>
 
-      <a href="#" class="cart-btn">
-        Cart <span class="cart-count">0</span>
-      </a>
+            <!-- BACKDROP -->
+            <div class="cart-backdrop"></div>
 
-      <!-- BACKDROP -->
-      <div class="cart-backdrop"></div>
+            <!-- CART DROPDOWN -->
+            <div class="cart-overlay">
+              <!-- X CLOSE BUTTON -->
+              <button class="cart-close">✕</button>
 
-      <!-- CART DROPDOWN -->
-      <div class="cart-overlay">
+              <h3>Your Cart</h3>
+              <div class="cart-items"></div>
 
-        <!-- X CLOSE BUTTON -->
-        <button class="cart-close">✕</button>
-
-        <h3>Your Cart</h3>
-        <div class="cart-items"></div>
-
-        <a href="../checkout.html" class="checkout-btn">Checkout</a>
-
-      </div>
-
-    </li>
-  </ul>
-</nav>
+              <a href="../checkout.html" class="checkout-btn">Checkout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
     <div class="layout">
+      <main class="main-content">
+        <div class="product-image-wrapper">
+          <img
+            src="../images/merchphotos/HoodieSvart.png"
+            class="product-image"
+            alt="Pink Hoodie"
+          />
+        </div>
 
-  <main class="main-content">
+        <div class="product-info">
+          <h1 class="product-title">OBLIVION HOODIE</h1>
 
-  <div class="product-image-wrapper">
+          <p class="product-description">
+            Black hoodie in 100% cotton, responsibly sourced.
+          </p>
 
-  <img
-    src="../images/merchphotos/HoodieSvart.png"
-    class="product-image"
-    alt="Pink Hoodie"
-  >
+          <div class="product-price">699 SEK</div>
+          <div class="size-selector">
+            <label for="size">SIZE</label>
 
-  </div>
-
-  <div class="product-info">
-
-    <h1 class="product-title">
-      Black Hoodie
-    </h1>
-
-    <p class="product-description">
-      Black hoodie with white graphic on the front.
-    </p>
-
-    <div class="product-price">
-      699 SEK
+            <select id="size" class="size-dropdown">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
+          <button
+            class="add-to-cart"
+            data-id="Black Hoodie"
+            data-name="Black Hoodie"
+            data-price="699"
+            data-image="../images/merchphotos/HoodieSvart.png"
+          >
+            ADD TO CART
+          </button>
+        </div>
+      </main>
     </div>
-
-    <button
-      class="add-to-cart"
-      data-id="Black Hoodie"
-      data-name="Black Hoodie"
-      data-price="699"
-      data-image="../images/merchphotos/HoodieSvart.png"
-    >
-      Add to Cart
-    </button>
-
-  </div>
-
-</main>
-
-</div>
     <!-- END page-container -->
     <!--to da left! aboutus etc-->
     <footer class="footer">

@@ -14,8 +14,11 @@ function slider(selector) {
   let autoplay;
 
   // product page links//
-  const links = ["SpecialBundle.html", "Carousel1.html", "Carousel2.html"];
-
+  const links = [
+    "ProductPagesHTML/PpVinylMain.html",
+    "ProductPagesHTML/PpDelux.html",
+    "ProductPagesHTML/SpecialBundle.html",
+  ];
   function update() {
     slides.forEach((s) => {
       s.classList.remove("active-slide", "prev-slide", "next-slide");
@@ -60,12 +63,15 @@ function slider(selector) {
 
   slides.forEach((slide, index) => {
     slide.addEventListener("click", () => {
-      if (index === currentIndex) {
-        window.location.href = links[index];
-      } else {
-        currentIndex = index;
-        update();
+      const isActive = slide.classList.contains("active-slide");
+
+      if (isActive) {
+        window.location.href = links[currentIndex];
+        return;
       }
+
+      currentIndex = index;
+      update();
     });
   });
 }
