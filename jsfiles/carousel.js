@@ -69,3 +69,49 @@ function slider(selector) {
     });
   });
 }
+
+const cartBtn = document.querySelector(".cart-btn");
+const cartOverlay = document.querySelector(".cart-overlay");
+const cartWrapper = document.querySelector(".cart-wrapper");
+
+cartBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  cartOverlay.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+  const clickedInside = cartWrapper.contains(e.target);
+
+  if (!clickedInside) {
+    cartOverlay.classList.remove("active");
+  }
+});
+
+const toggle = document.querySelector(".menu-toggle");
+const navbar = document.querySelector(".navbar");
+
+toggle.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+});
+
+const newsletterForm = document.querySelector(".newsletter-form");
+const orderToast = document.getElementById("orderToast");
+
+if (newsletterForm) {
+  newsletterForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const emailInput = newsletterForm.querySelector(".newsletter-input");
+
+    if (!emailInput.value.trim()) return;
+
+    emailInput.value = "";
+
+    orderToast.classList.add("active");
+
+    setTimeout(() => {
+      orderToast.classList.remove("active");
+    }, 3000);
+  });
+}

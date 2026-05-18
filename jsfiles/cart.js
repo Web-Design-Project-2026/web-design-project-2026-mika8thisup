@@ -1,7 +1,3 @@
-/* =========================
-   CART STORAGE
-========================= */
-
 function getCart() {
   return JSON.parse(sessionStorage.getItem("cart")) || [];
 }
@@ -10,21 +6,11 @@ function saveCart(cart) {
   sessionStorage.setItem("cart", JSON.stringify(cart));
 }
 
-
-/* =========================
-   ELEMENTS
-========================= */
-
 const cartBtn = document.querySelector(".cart-btn");
 const cartOverlay = document.querySelector(".cart-overlay");
 const cartItemsContainer = document.querySelector(".cart-items");
 const cartCountEl = document.querySelector(".cart-count");
 const cartCloseBtn = document.querySelector(".cart-close");
-
-
-/* =========================
-   OPEN / CLOSE CART (ONLY X CLOSES)
-========================= */
 
 function openCart() {
   if (!cartOverlay) return;
@@ -36,8 +22,6 @@ function closeCart() {
   cartOverlay.classList.remove("active");
 }
 
-
-/* OPEN CART */
 if (cartBtn) {
   cartBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -45,32 +29,24 @@ if (cartBtn) {
   });
 }
 
-
-/* CLOSE ONLY VIA X BUTTON */
 if (cartCloseBtn) {
   cartCloseBtn.addEventListener("click", closeCart);
 }
 
-
-/* =========================
-   ADD TO CART
-========================= */
-
-document.querySelectorAll(".add-to-cart").forEach(btn => {
+document.querySelectorAll(".add-to-cart").forEach((btn) => {
   btn.addEventListener("click", () => {
-
     const item = {
       id: btn.dataset.id,
       name: btn.dataset.name,
       price: Number(btn.dataset.price),
       image: btn.dataset.image,
-      quantity: 1
+      size: document.querySelector("#size")?.value || "",
+      quantity: 1,
     };
 
     let cart = getCart();
 
-    const existing = cart.find(p => p.id === item.id);
-
+    const existing = cart.find((p) => p.id === item.id && p.size === item.size);
     if (existing) {
       existing.quantity += 1;
     } else {
@@ -84,21 +60,16 @@ document.querySelectorAll(".add-to-cart").forEach(btn => {
   });
 });
 
-
-/* =========================
-   CHANGE QUANTITY
-========================= */
-
 function changeQty(id, amount) {
   let cart = getCart();
 
-  const item = cart.find(p => p.id === id);
+  const item = cart.find((p) => p.id === id);
   if (!item) return;
 
   item.quantity += amount;
 
   if (item.quantity <= 0) {
-    cart = cart.filter(p => p.id !== id);
+    cart = cart.filter((p) => p.id !== id);
   }
 
   saveCart(cart);
@@ -108,15 +79,10 @@ function changeQty(id, amount) {
   renderCheckout();
 }
 
-
-/* =========================
-   REMOVE ITEM
-========================= */
-
 function removeItem(id) {
   let cart = getCart();
 
-  cart = cart.filter(item => item.id !== id);
+  cart = cart.filter((item) => item.id !== id);
 
   saveCart(cart);
 
@@ -124,11 +90,6 @@ function removeItem(id) {
   updateCartCount();
   renderCheckout();
 }
-
-
-/* =========================
-   RENDER CART
-========================= */
 
 function renderCart() {
   if (!cartItemsContainer) return;
@@ -139,8 +100,7 @@ function renderCart() {
 
   let total = 0;
 
-  cart.forEach(item => {
-
+  cart.forEach((item) => {
     total += item.price * item.quantity;
 
     cartItemsContainer.innerHTML += `
@@ -150,6 +110,7 @@ function renderCart() {
 
         <div class="cart-item-name">
           ${item.name}
+           ${item.size ? `<div>Size: ${item.size}</div>` : ""}
         </div>
 
         <div class="cart-item-qty">
@@ -182,9 +143,6 @@ function renderCart() {
     </div>
   `;
 }
-/* =========================
-   CART COUNTER
-========================= */
 
 function updateCartCount() {
   if (!cartCountEl) return;
@@ -195,10 +153,6 @@ function updateCartCount() {
   cartCountEl.textContent = count;
 }
 
-
-/* =========================
-   INIT
-========================= */
 window.changeQty = changeQty;
 window.removeItem = removeItem;
 renderCart();
