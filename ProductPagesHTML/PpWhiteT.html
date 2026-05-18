@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ASTR3LA merch</title>
     <!--link to css file-->
+    <link rel="stylesheet" href="../ProductPagesCSS/SIZEselector.css" />
     <link rel="stylesheet" href="../cssfiles/Productpage.css" />
     <script src="../jsfiles/cart.js" defer></script>
     <script src="../jsfiles/productpage.js" defer></script>
@@ -33,7 +34,7 @@
     />
   </head>
   <body>
-    <div class="background-image"></div>
+    <div class="background-text"></div>
     <!--page content-->
     <!--header med nav links till merch, cart osv-->
     <header class="navbar">
@@ -85,7 +86,16 @@
           </p>
 
           <div class="product-price">449 SEK</div>
+          <div class="size-selector">
+            <label for="size">SIZE</label>
 
+            <select id="size" class="size-dropdown">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
           <button
             class="add-to-cart"
             data-id="Black CD"
@@ -111,17 +121,15 @@
             audience.
           </p>
         </div>
-
         <!--in da middle!-->
         <div class="footer-column">
           <h2>CONTACT</h2>
           <p>Email: info@mikarecords.com</p>
         </div>
-
         <!--to da right! mika logo-->
         <div class="footer-logo">
           <img
-            src="images/MikaLOGO.png"
+            src="../images/MikaLOGO.png"
             alt="MIKA records Logo"
             class="footer-logo-img"
           />
