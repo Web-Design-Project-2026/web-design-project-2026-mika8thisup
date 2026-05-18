@@ -149,7 +149,121 @@ body {
   visibility: visible;
   transform: translateY(0);
 }
+.newsletter-section {
+  width: 0%;
+  max-width: 650px;
 
+  margin: 60px auto 120px;
+
+  padding: 40px;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  border-radius: 16px;
+  width: clamp(300px, 60%, 520px);
+  text-align: center;
+  color: white;
+}
+
+.newsletter-title {
+  margin: 0 0 15px;
+
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: clamp(12px, 4vw, 48px);
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-family: "Special Gothic Expanded One", sans-serif;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.newsletter-input {
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+}
+.newsletter-input:focus {
+  outline: 2px solid #fa538b;
+  outline-offset: 2px;
+}
+.newsletter-btn {
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #9ced48;
+  color: rgb(0, 0, 0);
+
+  font-size: 15px;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.newsletter-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.01);
+}
+.newsletter-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  text-align: center;
+}
+.checkbox-label input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+
+  accent-color: #9ced48;
+
+  transform: scale(1);
+  cursor: pointer;
+}
 .footer {
   background-color: #fa538b;
   padding: 20px 40px;
