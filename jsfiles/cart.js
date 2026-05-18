@@ -105,6 +105,7 @@ function changeQty(id, amount) {
 
   renderCart();
   updateCartCount();
+  renderCheckout();
 }
 
 
@@ -121,6 +122,7 @@ function removeItem(id) {
 
   renderCart();
   updateCartCount();
+  renderCheckout();
 }
 
 
@@ -132,31 +134,44 @@ function renderCart() {
   if (!cartItemsContainer) return;
 
   const cart = getCart();
+
   cartItemsContainer.innerHTML = "";
 
   let total = 0;
 
   cart.forEach(item => {
+
     total += item.price * item.quantity;
 
     cartItemsContainer.innerHTML += `
       <div class="cart-item">
-        <img src="${item.image}" width="50">
 
-        <div class="cart-info">
-          <p>${item.name}</p>
-          <p>${item.price} SEK</p>
+        <img src="${item.image}" class="cart-item-img">
 
-          <div class="qty-controls">
-            <button onclick="changeQty('${item.id}', -1)">-</button>
-            <span>${item.quantity}</span>
-            <button onclick="changeQty('${item.id}', 1)">+</button>
-          </div>
-
-          <button onclick="removeItem('${item.id}')">
-            Remove
-          </button>
+        <div class="cart-item-name">
+          ${item.name}
         </div>
+
+        <div class="cart-item-qty">
+
+          <button class="qty-btn"
+            onclick="changeQty('${item.id}', -1)">
+            -
+          </button>
+
+          <span>${item.quantity}</span>
+
+          <button class="qty-btn"
+            onclick="changeQty('${item.id}', 1)">
+            +
+          </button>
+
+        </div>
+
+        <div class="cart-item-price">
+          ${item.price * item.quantity} SEK
+        </div>
+
       </div>
     `;
   });
@@ -167,8 +182,6 @@ function renderCart() {
     </div>
   `;
 }
-
-
 /* =========================
    CART COUNTER
 ========================= */
@@ -186,6 +199,7 @@ function updateCartCount() {
 /* =========================
    INIT
 ========================= */
-
+window.changeQty = changeQty;
+window.removeItem = removeItem;
 renderCart();
 updateCartCount();
