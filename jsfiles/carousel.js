@@ -1,4 +1,4 @@
-console.log("🔥 carousel JS is running");
+console.log("carousel JS is running");
 
 document.addEventListener("DOMContentLoaded", startup);
 

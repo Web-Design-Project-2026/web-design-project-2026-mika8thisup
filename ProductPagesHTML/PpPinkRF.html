@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WorkingTitleForNow</title>
     <!--link to css file-->
-    <link rel="stylesheet" href="../cssfiles/Productpage.css" />
-    <script src="../jsfiles/cart.js" defer></script>
-    <script src="../jsfiles/productpage.js" defer></script>
+    <link rel="stylesheet" href="cssfiles/Productpage.css" />
+    <script src="jsfiles/cart.js" defer></script>
+    <script src="jsfiles/productpage.js" defer></script>
     <!--Special gothic expanded one-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,87 +33,69 @@
     />
   </head>
   <body>
-    <div class="background-image"></div>
+    <div class="background-text"></div>
     <!--page content-->
     <!--header med nav links till merch, cart osv-->
     <header class="navbar">
       <div class="logo">ASTR3LA</div>
       <nav class="nav-links">
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../merch.html">Merch</a></li>
-    <li><a href="#">Tour</a></li>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="#">Tour</a></li>
 
-    <!-- CART -->
-    <li class="cart-wrapper">
+          <!-- CART -->
+          <li class="cart-wrapper">
+            <a href="#" class="cart-btn">
+              Cart <span class="cart-count">0</span>
+            </a>
 
-      <a href="#" class="cart-btn">
-        Cart <span class="cart-count">0</span>
-      </a>
+            <div class="cart-backdrop"></div>
 
-      <!-- BACKDROP -->
-      <div class="cart-backdrop"></div>
+            <div class="cart-overlay">
+              <button class="cart-close">✕</button>
 
-      <!-- CART DROPDOWN -->
-      <div class="cart-overlay">
+              <h3>Your Cart</h3>
+              <div class="cart-items"></div>
 
-        <!-- X CLOSE BUTTON -->
-        <button class="cart-close">✕</button>
-
-        <h3>Your Cart</h3>
-        <div class="cart-items"></div>
-
-        <a href="../checkout.html" class="checkout-btn">Checkout</a>
-
-      </div>
-
-    </li>
-  </ul>
-</nav>
+              <a href="checkout.html" class="checkout-btn">Checkout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
     <div class="layout">
+      <main class="main-content">
+        <div class="product-image-wrapper">
+          <img
+            src="images/merchphotos/PinkRF.png"
+            class="product-image"
+            alt="Pink Hoodie"
+          />
+        </div>
 
-  <main class="main-content">
+        <div class="product-info">
+          <h1 class="product-title">Pink Keychain</h1>
 
-  <div class="product-image-wrapper">
+          <p class="product-description">
+            Pink Keychain with the word ASTR3LA in green text and a silver
+            clasp.
+          </p>
 
-  <img
-    src="../images/merchphotos/PinkRF.png"
-    class="product-image"
-    alt="Pink keychain"
-  >
+          <div class="product-price">499 SEK</div>
 
-  </div>
-
-  <div class="product-info">
-
-    <h1 class="product-title">
-      Pink Keychain
-    </h1>
-
-    <p class="product-description">
-      Pink Keychain with the word ASTR3LA in green text and a silver clasp.
-    </p>
-
-    <div class="product-price">
-      199 SEK
+          <button
+            class="add-to-cart"
+            data-id="pink-Keychain"
+            data-name="Pink Keychain"
+            data-price="499"
+            data-image="images/merchphotos/PinkRF.png"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </main>
     </div>
-
-    <button
-      class="add-to-cart"
-      data-id="pink-Keychain"
-      data-name="Pink Keychain"
-      data-price="199"
-      data-image="../images/merchphotos/PinkRF.png"
-    >
-      Add to Cart
-    </button>
-
-  </div>
-
-</main>
-
-</div>
     <!-- END page-container -->
     <!--to da left! aboutus etc-->
     <footer class="footer">

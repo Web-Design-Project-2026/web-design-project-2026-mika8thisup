@@ -21,7 +21,6 @@
   font-weight: bold;
 }
 
-/* NAV LIST */
 .nav-links ul {
   list-style: none;
   display: flex;
@@ -31,8 +30,6 @@
   padding: 0;
 }
 
-/* LINKS */
-/* LINKS */
 .nav-links a {
   position: relative;
   text-decoration: none;
@@ -43,7 +40,6 @@
   transition: opacity 0.3s ease;
 }
 
-/* UNDERLINE */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -59,18 +55,15 @@
   transition: width 0.3s ease;
 }
 
-/* HOVER ANIMATION */
 .nav-links a:hover::after {
   width: 100%;
 }
 
-/* ACTIVE LINK */
 .nav-links a.active-nav::after {
   width: 100%;
   transition: none;
 }
 
-/* HOVER EFFECT */
 .nav-links a:hover {
   opacity: 0.7;
 }
@@ -101,10 +94,8 @@
 .checkout-btn:hover {
   background: black;
   color: white;
-  
 }
 
-/* HIDDEN BY DEFAULT */
 .cart-overlay {
   position: absolute;
 
@@ -117,7 +108,7 @@
   padding: 20px;
   border-radius: 16px;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
   opacity: 0;
   visibility: hidden;
@@ -127,7 +118,6 @@
   transition: 0.3s ease;
 }
 
-/* SHOW */
 .cart-overlay.active {
   opacity: 1;
   visibility: visible;
@@ -169,7 +159,6 @@
   border-bottom: 1px solid #eee;
 }
 
-/* product image */
 .cart-item-img {
   width: 40px;
   height: 40px;
@@ -178,14 +167,12 @@
   flex-shrink: 0;
 }
 
-/* name takes most space */
 .cart-item-name {
   flex: 1;
   font-size: 12px;
   line-height: 1.2;
 }
 
-/* quantity smaller */
 .cart-item-qty {
   width: 60px;
   text-align: center;
@@ -193,7 +180,6 @@
   color: #555;
 }
 
-/* price aligned right */
 .cart-item-price {
   width: 60px;
   text-align: right;
@@ -231,14 +217,25 @@ body {
   overflow-x: hidden;
 }
 
-
 .main {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
 
+.background-text {
+  position: fixed;
+  inset: 0;
 
+  z-index: -1;
+
+  background-image: url("../images/backgroundsmallandlighter.png");
+  background-repeat: repeat;
+
+  background-size: 500px;
+
+  pointer-events: none;
+}
 .layout {
   display: flex;
   justify-content: center;
@@ -247,7 +244,6 @@ body {
   margin: 40px auto;
 }
 
-/* MAIN */
 .main-content {
   display: flex;
   gap: 40px;
@@ -300,7 +296,6 @@ body {
   color: white;
 }
 
-/* PRICE */
 .product-price {
   font-size: 28px;
   font-weight: bold;
@@ -326,7 +321,6 @@ body {
     transform-origin 0.1s ease;
 }
 
-/* BIG BUTTON */
 .add-to-cart {
   width: 100%;
 
@@ -395,8 +389,8 @@ body {
   gap: 5px;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   min-height: 100%;
 }
-

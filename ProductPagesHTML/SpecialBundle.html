@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+
+    <link rel="stylesheet" href="cssfiles/Productpage.css" />
+    <script src="jsfiles/cart.js" defer></script>
+    <script src="jsfiles/productpage.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="background-text"></div>
+
+    <header class="navbar">
+      <div class="logo">ASTR3LA</div>
+
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="#">Tour</a></li>
+
+          <li class="cart-wrapper">
+            <a href="#" class="cart-btn">
+              Cart <span class="cart-count">0</span>
+            </a>
+
+            <div class="cart-backdrop"></div>
+
+            <div class="cart-overlay">
+              <button class="cart-close">✕</button>
+              <h3>Your Cart</h3>
+              <div class="cart-items"></div>
+              <a href="checkout.html" class="checkout-btn">Checkout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <main class="main-content">
+        <div class="product-image-wrapper">
+          <img
+            src="images/carousel/SpecialBundleCarousel.png"
+            class="product-image"
+            alt="Special Bundle including a record, tote bag, exclusive blue hoodie and two keychains, one pink and one green."
+          />
+        </div>
+
+        <!-- PRODUCT INFO -->
+        <div class="product-info">
+          <h1 class="product-title">Special Bundle</h1>
+
+          <p class="product-description">
+            Special Bundle including a record, tote bag, exclusive blue hoodie
+            and two keychains, one pink and one green.
+          </p>
+
+          <div class="product-price">499 SEK</div>
+
+          <button
+            class="add-to-cart"
+            data-id="special-bundle"
+            data-name="Special Bundle"
+            data-price="499"
+            data-image="images/carousel/SpecialBundleCarousel.png"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h2>ABOUT US</h2>
+          <p>
+            MIKArecords is an independent record label dedicated to discovering
+            and promoting unique musical talents.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h2>CONTACT</h2>
+          <p>Email: info@mikarecords.com</p>
+        </div>
+
+        <div class="footer-logo">
+          <img
+            src="images/MikaLOGO.png"
+            alt="MIKA records Logo"
+            class="footer-logo-img"
+          />
+          <p>&copy; 2026 MIKArecords. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -323,3 +323,11 @@ body {
     display: flex;
   }
 }
+.product-link,
+.product-link:visited,
+.product-link:hover,
+.product-link:active,
+.product-link:focus {
+  text-decoration: none;
+  color: inherit;
+}
