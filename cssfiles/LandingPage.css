@@ -354,22 +354,7 @@ body {
   transform: scale(1);
   cursor: pointer;
 }
-.place-order-btn {
-  width: 100%;
-  margin-top: 20px;
-  padding: 14px;
-  border: none;
-  border-radius: 999px;
-  background: black;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-.place-order-btn:hover {
-  opacity: 0.85;
-}
+
 .order-toast {
   position: fixed;
   right: 20px;
