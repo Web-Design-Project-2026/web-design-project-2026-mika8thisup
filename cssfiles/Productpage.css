@@ -71,6 +71,14 @@
   position: relative;
   list-style: none;
 }
+.cart-count {
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
 
 .checkout-btn {
   display: inline-block;
@@ -207,6 +215,7 @@
   text-align: center;
   font-size: 12px;
 }
+
 body {
   margin: 0;
   min-height: 100%;

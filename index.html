@@ -31,17 +31,21 @@
       <div class="logo">ASTR3LA</div>
       <nav class="nav-links">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active-nav">Home</a></li>
           <li><a href="merch.html">Merch</a></li>
           <li><a href="#">Tour</a></li>
           <li class="cart-wrapper">
-            <a href="#" class="cart-btn">Cart</a>
+            <a href="#" class="cart-btn">
+              Cart <span class="cart-count">0</span>
+            </a>
+
+            <div class="cart-backdrop"></div>
 
             <div class="cart-overlay">
-              <h3>Your Cart</h3>
+              <button class="cart-close">✕</button>
 
-              <p>Black Hoodie</p>
-              <p>Vinyl Record</p>
+              <h3>Your Cart</h3>
+              <div class="cart-items"></div>
 
               <a href="checkout.html" class="checkout-btn">Checkout</a>
             </div>
