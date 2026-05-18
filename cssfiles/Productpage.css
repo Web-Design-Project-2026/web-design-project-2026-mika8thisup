@@ -101,7 +101,6 @@
 .checkout-btn:hover {
   background: black;
   color: white;
-  
 }
 
 /* HIDDEN BY DEFAULT */
@@ -117,7 +116,7 @@
   padding: 20px;
   border-radius: 16px;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
   opacity: 0;
   visibility: hidden;
@@ -231,14 +230,25 @@ body {
   overflow-x: hidden;
 }
 
-
 .main {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
 
+.background-text {
+  position: fixed;
+  inset: 0;
 
+  z-index: -1;
+
+  background-image: url("../images/backgroundsmallandlighter.png");
+  background-repeat: repeat;
+
+  background-size: 500px;
+
+  pointer-events: none;
+}
 .layout {
   display: flex;
   justify-content: center;
@@ -395,8 +405,8 @@ body {
   gap: 5px;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   min-height: 100%;
 }
-
