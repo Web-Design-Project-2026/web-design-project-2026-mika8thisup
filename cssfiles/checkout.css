@@ -21,7 +21,6 @@
   font-weight: bold;
 }
 
-/* NAV LIST */
 .nav-links ul {
   list-style: none;
   display: flex;
@@ -31,8 +30,6 @@
   padding: 0;
 }
 
-/* LINKS */
-/* LINKS */
 .nav-links a {
   position: relative;
   text-decoration: none;
@@ -43,7 +40,6 @@
   transition: opacity 0.3s ease;
 }
 
-/* UNDERLINE */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -59,18 +55,15 @@
   transition: width 0.3s ease;
 }
 
-/* HOVER ANIMATION */
 .nav-links a:hover::after {
   width: 100%;
 }
 
-/* ACTIVE LINK */
 .nav-links a.active-nav::after {
   width: 100%;
   transition: none;
 }
 
-/* HOVER EFFECT */
 .nav-links a:hover {
   opacity: 0.7;
 }
@@ -101,10 +94,8 @@
 .checkout-btn:hover {
   background: black;
   color: white;
-  
 }
 
-/* HIDDEN BY DEFAULT */
 .cart-overlay {
   position: absolute;
 
@@ -117,7 +108,7 @@
   padding: 20px;
   border-radius: 16px;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
   opacity: 0;
   visibility: hidden;
@@ -131,8 +122,6 @@
   visibility: visible;
   transform: translateY(0);
 }
-
-/* SHOW */
 
 .cart-backdrop {
   position: fixed;
@@ -234,7 +223,6 @@
   border-radius: 8px;
 }
 
-
 .checkout-qty {
   display: flex;
   align-items: center;
@@ -263,6 +251,7 @@
   max-width: 700px;
   margin: auto;
   padding-bottom: 60px;
+  padding-top: 20px;
 }
 
 .checkout-total {
@@ -280,7 +269,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color:black;
+  background-color: black;
   overflow-x: hidden;
 }
 
@@ -292,19 +281,20 @@ body {
   margin: 40px auto;
 }
 
-/* MAIN */
 .main-content {
   flex: 3;
 
   background: lightgray;
   min-height: 400px;
 
-  padding: 20px;
+  padding: 40px;
   margin-top: 100px;
   border-radius: 10px;
+
+  font-family: "Special Gothic Expanded One", sans-serif;
+  letter-spacing: 1px;
 }
 
-/* ASIDE */
 .sidebar {
   flex: 1;
 
@@ -358,7 +348,8 @@ body {
 
   font-size: 16px;
   font-weight: bold;
-
+  font-family: "Special Gothic Expanded One", sans-serif;
+  letter-spacing: 1px;
   cursor: pointer;
 
   transition: 0.2s ease;
@@ -383,7 +374,7 @@ body {
   font-size: 14px;
   font-weight: 500;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 
   opacity: 0;
   transform: translateY(20px);
