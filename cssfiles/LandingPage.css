@@ -455,7 +455,7 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center; /* vertical centering */
+  align-items: center;
   justify-content: center;
 }
 
@@ -565,7 +565,6 @@ body {
 }
 /* BASE (desktop default already fine) */
 
-/* <= 1250px */
 @media (max-width: 1250px) {
   .sliderContainer {
     padding-bottom: 40px;
@@ -584,7 +583,6 @@ body {
   }
 }
 
-/* <= 1000px */
 @media (max-width: 1000px) {
   .sliderContainer {
     height: 72vh;
@@ -600,11 +598,10 @@ body {
   }
 
   .slide {
-    top: 42%; /* was 38% — this is the fix */
+    top: 42%;
   }
 }
 
-/* <= 875px */
 @media (max-width: 875px) {
   .sliderContainer {
     height: 75vh; /* restore balance (don’t shrink too much here) */
