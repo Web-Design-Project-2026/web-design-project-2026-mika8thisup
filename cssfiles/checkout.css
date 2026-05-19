@@ -302,7 +302,19 @@ body {
   margin-top: 100px;
   border-radius: 10px;
 }
+.background-text {
+  position: fixed;
+  inset: 0;
 
+  z-index: -1;
+
+  background-image: url("../images/backgroundsmallandlighter.png");
+  background-repeat: repeat;
+
+  background-size: 500px;
+
+  pointer-events: none;
+}
 .form-group {
   display: flex;
   flex-direction: column;
