@@ -1,0 +1,40 @@
+.tracklist {
+  margin-top: 2px;
+  padding: 2px;
+  color: white;
+}
+
+.tracklist h3 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+
+  letter-spacing: 1px;
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+.tracklist h4 {
+  font-size: 14px;
+  margin: 10px 0 5px 0;
+  letter-spacing: 2px;
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+.tracklist ol {
+  margin: 0;
+  padding-left: 18px;
+  font-style: italic;
+}
+
+.tracklist li {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+@media (max-width: 900px) {
+  .product-info {
+    gap: 12px;
+  }
+
+  .tracklist {
+    margin-top: 20px;
+  }
+}
