@@ -147,7 +147,7 @@ body {
 
   background: white;
   padding: 20px;
-  border-radius: 16px;
+  border-radius: 12px;
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
@@ -258,10 +258,10 @@ body {
   padding: 40px;
 
   background: rgba(0, 0, 0, 0.85);
-
-  border-radius: 16px;
+  border-radius: 12px;
   text-align: center;
   color: white;
+  box-shadow: 0px 10px 60px rgba(132, 132, 132, 0.15);
 }
 
 .newsletter-title {
@@ -678,5 +678,45 @@ body {
 
   .newsletter-section {
     margin: 0px auto 15px;
+  }
+}
+@media (max-width: 700px) {
+  .navbar {
+    width: 95%;
+    padding: 12px 16px;
+
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+  }
+
+  .nav-links ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    gap: 12px;
+
+    background: #9ced48;
+    padding: 12px;
+    border-radius: 8px;
+
+    display: none;
+
+    width: 100%;
+  }
+
+  .navbar.active .nav-links ul {
+    display: flex;
   }
 }
