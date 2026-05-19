@@ -292,24 +292,26 @@ body {
   font-size: 13px;
 }
 
-.product-image {
-  width: 50%;
+.product-image-wrapper {
+  flex: 1;
   max-width: 500px;
+}
 
-  border-radius: 12px;
-
-  object-fit: cover;
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .product-info {
   flex: 1;
-
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .product-title {
-  font-size: 42px;
+  font-size: clamp(24px, 3vw, 42px);
   margin: 0;
   color: white;
 }
@@ -319,10 +321,11 @@ body {
   line-height: 1.6;
   color: white;
   font-style: italic;
+  font-size: clamp(12px, 1.5vw, 16px);
 }
 
 .product-price {
-  font-size: 28px;
+  font-size: clamp(18px, 2.5vw, 28px);
   font-weight: bold;
   color: white;
 }
@@ -330,20 +333,16 @@ body {
 .product-image-wrapper {
   width: 50%;
   max-width: 500px;
-
   overflow: hidden;
   border-radius: 12px;
-
-  cursor: zoom-in;
 }
 
 .product-image {
   width: 100%;
   display: block;
 
-  transition:
-    transform 0.15s ease,
-    transform-origin 0.1s ease;
+  transition: transform 0.15s ease;
+  transform-origin: 0.1s ease;
 }
 
 .add-to-cart {
@@ -352,12 +351,12 @@ body {
   padding: 18px;
 
   border: none;
-  border-radius: 999px;
+  border-radius: 12px;
 
   background: #fa538b;
   color: white;
 
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   font-weight: bold;
   font-family: "Special Gothic Expanded One", sans-serif;
   letter-spacing: 1px;
@@ -421,4 +420,47 @@ html,
 body {
   margin: 0;
   min-height: 100%;
+}
+@media (max-width: 650px) {
+  .main-content {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+  .product-info {
+    gap: 12px;
+  }
+  .product-image-wrapper,
+  .product-image {
+    width: 70%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .product-image-wrapper {
+    width: 100%;
+    max-width: 350px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .product-info {
+    align-items: center;
+  }
 }

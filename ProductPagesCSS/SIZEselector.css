@@ -20,3 +20,18 @@
   background: white;
   cursor: pointer;
 }
+@media (max-width: 650px) {
+  .size-selector {
+    align-items: center;
+  }
+
+  .size-selector label {
+    text-align: center;
+  }
+
+  .size-dropdown {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+  }
+}
