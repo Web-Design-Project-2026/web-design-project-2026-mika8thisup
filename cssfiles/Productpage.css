@@ -1,27 +1,43 @@
-html,
 body {
-  height: 100%;
-}
-
-body {
+  margin: 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  background-color: black;
+  overflow-x: hidden;
 }
 
 .layout {
-  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  margin: 40px auto;
 }
 
-.footer p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: stretch;
 }
 
-.footer h2 {
-  font-family: "Special Gothic Expanded One", sans-serif;
-  font-weight: 600;
+.main-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+
+  background: rgb(39, 39, 39);
+  border-radius: 12px;
+
+  padding: 40px;
+  margin-top: 100px;
+
+  width: 100%;
+  max-width: 1000px;
 }
+
 .navbar {
   position: fixed;
   top: 10px;
@@ -67,13 +83,11 @@ body {
 .nav-links a::after {
   content: "";
   position: absolute;
-
   left: 0;
   bottom: 0;
 
   width: 0%;
   height: 3px;
-
   background: rgb(1, 150, 1);
 
   transition: width 0.3s ease;
@@ -91,6 +105,7 @@ body {
 .nav-links a:hover {
   opacity: 0.7;
 }
+
 .cart-wrapper {
   position: relative;
   list-style: none;
@@ -98,23 +113,22 @@ body {
 
 .checkout-btn {
   display: inline-block;
-
   padding: 10px 18px;
-
   border: 2px solid black;
-  border-radius: 999px; /* makes it fully rounded */
+  border-radius: 999px;
 
   text-decoration: none;
   color: black;
 
   font-size: 14px;
   font-weight: 500;
-
   transition: 0.2s ease;
 }
+
 .checkout-btn::after {
   display: none;
 }
+
 .checkout-btn:hover {
   background: black;
   color: white;
@@ -122,12 +136,10 @@ body {
 
 .cart-overlay {
   position: absolute;
-
   top: 140%;
   right: 0;
 
   width: 250px;
-
   background: white;
   padding: 20px;
   border-radius: 16px;
@@ -136,9 +148,7 @@ body {
 
   opacity: 0;
   visibility: hidden;
-
   transform: translateY(-10px);
-
   transition: 0.3s ease;
 }
 
@@ -147,6 +157,7 @@ body {
   visibility: visible;
   transform: translateY(0);
 }
+
 .cart-backdrop {
   position: fixed;
   inset: 0;
@@ -158,6 +169,7 @@ body {
 .cart-backdrop.active {
   display: block;
 }
+
 .cart-close {
   position: absolute;
   top: 10px;
@@ -165,13 +177,12 @@ body {
 
   background: none;
   border: none;
-
   font-size: 22px;
   cursor: pointer;
-
   color: black;
   z-index: 10;
 }
+
 .cart-item {
   display: grid;
   grid-template-columns: 40px 1fr 50px 60px;
@@ -188,11 +199,9 @@ body {
   height: 40px;
   object-fit: cover;
   border-radius: 6px;
-  flex-shrink: 0;
 }
 
 .cart-item-name {
-  flex: 1;
   font-size: 12px;
   line-height: 1.2;
 }
@@ -202,17 +211,16 @@ body {
   text-align: center;
   font-size: 11px;
   color: #555;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .cart-item-price {
   width: 60px;
   text-align: right;
   font-weight: 500;
-}
-.cart-item-qty {
-  display: flex;
-  align-items: center;
-  gap: 5px;
 }
 
 .qty-btn {
@@ -231,54 +239,17 @@ body {
   text-align: center;
   font-size: 12px;
 }
-body {
-  margin: 0;
-  min-height: 100%;
-  font-family: "Special Gothic Expanded One", sans-serif;
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  overflow-x: hidden;
-}
-
-.main {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
 
 .background-text {
   position: fixed;
   inset: 0;
-
   z-index: -1;
 
   background-image: url("../images/backgroundsmallandlighter.png");
   background-repeat: repeat;
-
   background-size: 500px;
 
   pointer-events: none;
-}
-.layout {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 90%;
-  margin: 40px auto;
-}
-
-.main-content {
-  display: flex;
-  gap: 40px;
-
-  align-items: flex-start;
-
-  background: rgb(39, 39, 39);
-  border-radius: 12px;
-
-  padding: 40px;
-  margin-top: 100px;
 }
 
 .product-link {
@@ -293,25 +264,46 @@ body {
 }
 
 .product-image-wrapper {
-  flex: 1;
-  max-width: 500px;
+  flex: 1.2;
+  max-width: 650px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-image {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+  transition: transform 0.2s ease;
 }
 
 .product-info {
   flex: 1;
-  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
+  width: 100%;
+  max-width: 100%;
+  align-items: flex-start;
+  color: white;
+  padding-right: 10px;
 }
+
+.product-title,
+.product-description,
+.product-price,
+.tracklist {
+  width: 100%;
+  max-width: 100%;
+}
+
 .product-title {
-  font-size: clamp(24px, 3vw, 42px);
+  font-size: clamp(34px, 3vw, 72px);
   margin: 0;
   color: white;
 }
@@ -321,35 +313,22 @@ body {
   line-height: 1.6;
   color: white;
   font-style: italic;
-  font-size: clamp(12px, 1.5vw, 16px);
+  font-size: clamp(12px, 1.5vw, 10px);
+  text-align: justify;
+  margin-bottom: 0;
 }
 
 .product-price {
   font-size: clamp(18px, 2.5vw, 28px);
   font-weight: bold;
   color: white;
-}
-
-.product-image-wrapper {
-  width: 50%;
-  max-width: 500px;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.product-image {
-  width: 100%;
-  display: block;
-
-  transition: transform 0.15s ease;
-  transform-origin: 0.1s ease;
+  margin-bottom: 0;
 }
 
 .add-to-cart {
   width: 100%;
-
   padding: 18px;
-
+  margin-top: 8px;
   border: none;
   border-radius: 12px;
 
@@ -369,9 +348,11 @@ body {
   transform: scale(1.02);
   opacity: 0.9;
 }
+
 .text-content {
   flex: 1;
 }
+
 .footer {
   background-color: #fa538b;
   padding: 20px 40px;
@@ -380,6 +361,7 @@ body {
   position: relative;
   z-index: 10;
 }
+
 .footer-container {
   width: 100%;
   display: grid;
@@ -387,11 +369,13 @@ body {
   align-items: start;
   gap: 40px;
 }
+
 .footer h2 {
   font-size: clamp(16px, 1.2vw, 20px);
   font-family: "Special Gothic Expanded One", sans-serif;
   font-weight: 600;
 }
+
 .footer p {
   margin: 5px 0;
   font-family: "Poppins", sans-serif;
@@ -404,11 +388,13 @@ body {
   height: auto;
   display: block;
 }
+
 .footer-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .footer-column,
 .footer-logo {
   display: flex;
@@ -416,31 +402,45 @@ body {
   gap: 5px;
 }
 
-html,
-body {
-  margin: 0;
-  min-height: 100%;
-}
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .main-content {
     flex-direction: column;
     padding: 20px;
     gap: 20px;
   }
+
   .product-info {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
     gap: 12px;
+    align-items: center;
+  }
+  .product-title {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(28px, 8vw, 48px);
+    line-height: 1;
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
   .product-image-wrapper,
   .product-image {
     width: 70%;
     max-width: 100%;
   }
+  .product-description,
+  .product-price {
+    text-align: left;
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }
-@media (max-width: 650px) {
+
+@media (max-width: 750px) {
   .main-content {
     flex-direction: column;
     align-items: center;
-    text-align: justify;
     padding: 20px;
     gap: 20px;
   }
@@ -448,7 +448,6 @@ body {
   .product-image-wrapper {
     width: 100%;
     max-width: 350px;
-
     display: flex;
     justify-content: center;
   }
@@ -457,10 +456,27 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    align-items: center;
     margin: 0 auto;
   }
 
   .product-info {
+    width: 100%;
+    max-width: 350px;
+    padding: 0;
+    gap: 12px;
     align-items: center;
+  }
+
+  .product-title {
+    text-align: center;
+    width: 100%;
+  }
+  .product-description,
+  .product-price {
+    text-align: left;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 20px;
   }
 }
