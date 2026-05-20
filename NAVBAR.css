@@ -226,6 +226,10 @@
   font-size: 28px;
   cursor: pointer;
 }
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* MOBILE NAV */
 
