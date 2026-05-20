@@ -213,7 +213,7 @@ body {
     padding: 0;
     gap: 12px;
     align-items: center;
-    text-align: justify;
+    text-align: center;
     margin: 0 auto;
     max-width: 90%;
   }
@@ -231,6 +231,11 @@ body {
     max-width: 100%;
   }
   .product-price {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .product-description {
     text-align: center;
     max-width: 100%;
     padding: 0 20px;
@@ -275,6 +280,11 @@ body {
   .product-price {
     text-align: center;
     justify-content: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .product-description {
+    text-align: center;
     max-width: 100%;
     padding: 0 20px;
   }
