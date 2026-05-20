@@ -8,13 +8,17 @@
 
   align-self: flex-start;
 }
-
+.tracklist-list {
+  margin: 0;
+  padding-left: 20px;
+  color: white;
+}
 .tracklist h3,
 .tracklist h4 {
   color: white;
   margin: 6px 0;
-  text-align: left;
   letter-spacing: 2px;
+  text-align: left;
 }
 
 .tracklist h3 {
@@ -28,8 +32,9 @@
 }
 
 .tracklist ol {
-  margin: 0 0 10px 0;
-  padding-left: 18px;
+  margin: 0;
+  padding-left: 20px; /* keeps numbers visible and aligned */
+  color: white;
 }
 
 .tracklist li {
@@ -43,18 +48,16 @@
 
 @media (max-width: 700px) {
   .tracklist {
-    width: 100%;
-    max-width: 350px;
-    padding: 20px 0;
-    align-self: flex-start;
+    align-self: center;
+    text-align: center;
   }
-
-  .tracklist h3,
-  .tracklist h4 {
+  .tracklist-list {
+    padding-left: 0;
+    list-style-position: inside;
+    display: inline-block;
     text-align: left;
   }
-
-  .tracklist ol {
-    padding-left: 18px;
+  .tracklist h4 {
+    text-align: center;
   }
 }

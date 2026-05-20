@@ -112,7 +112,8 @@ body {
   color: white;
   font-style: italic;
   font-size: clamp(12px, 1.5vw, 10px);
-  text-align: justify;
+  text-align: center;
+  align-items: center;
   margin-bottom: 0;
 }
 
@@ -129,10 +130,9 @@ body {
   margin-top: 8px;
   border: none;
   border-radius: 12px;
-
   background: #fa538b;
   color: white;
-
+  margin-bottom: 10px;
   font-size: clamp(14px, 2vw, 18px);
   font-weight: bold;
   font-family: "Special Gothic Expanded One", sans-serif;
@@ -213,6 +213,9 @@ body {
     padding: 0;
     gap: 12px;
     align-items: center;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 90%;
   }
   .product-title {
     width: 100%;
@@ -227,15 +230,14 @@ body {
     width: 70%;
     max-width: 100%;
   }
-  .product-description,
   .product-price {
-    text-align: left;
+    text-align: center;
     max-width: 100%;
     padding: 0 20px;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .main-content {
     flex-direction: column;
     align-items: center;
@@ -259,21 +261,21 @@ body {
   }
 
   .product-info {
-    width: 100%;
+    width: 90%;
     max-width: 350px;
     padding: 0;
     gap: 12px;
-    align-items: center;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .product-title {
     text-align: center;
     width: 100%;
   }
-  .product-description,
   .product-price {
-    text-align: left;
-    align-items: center;
+    text-align: center;
+    justify-content: center;
     max-width: 100%;
     padding: 0 20px;
   }

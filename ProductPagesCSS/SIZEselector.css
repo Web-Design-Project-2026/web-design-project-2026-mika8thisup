@@ -22,11 +22,11 @@
 }
 @media (max-width: 750px) {
   .size-selector {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .size-selector label {
-    text-align: flex-start;
+    text-align: center;
   }
 
   .size-dropdown {
