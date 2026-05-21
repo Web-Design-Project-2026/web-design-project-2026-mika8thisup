@@ -1,0 +1,263 @@
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  background-color: black;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.background-image {
+  position: fixed;
+  inset: 0;
+
+  background-image: url("../images/merchphotos/merchbg.png");
+  background-size: 150%;
+  background-position: center;
+
+  opacity: 0.45;
+  z-index: -1;
+}
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+.main {
+  padding: 0 20px 40px;
+  width: 70%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.bundle {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-top: 14vh;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  justify-content: center;
+
+  column-gap: clamp(20px, 5vw, 80px);
+  row-gap: 40px;
+
+  width: 100%;
+  padding: 5px 0 10px;
+}
+
+.item {
+  width: 100%;
+  height: 400px;
+  background: #000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  color: inherit;
+  padding: 0 15px 10px;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+
+  position: absolute;
+  inset: 0;
+}
+
+.merch-img1,
+.merch-img2 {
+  transition: opacity 0.2s ease;
+}
+
+.merch-img2 {
+  opacity: 0;
+}
+
+.img-container:hover .merch-img1 {
+  opacity: 0;
+}
+
+.img-container:hover .merch-img2 {
+  opacity: 1;
+}
+
+.text-items {
+  padding-top: 30px;
+}
+
+.item-title {
+  margin: 20px 0 6px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.item-description {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.footer {
+  background-color: #fa538b;
+  padding: 20px 40px;
+  color: white;
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+}
+.footer-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  gap: 40px;
+}
+.footer h2 {
+  font-size: clamp(16px, 1.2vw, 20px);
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 600;
+}
+.footer p {
+  margin: 5px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(10px, 1vw, 16px);
+  font-weight: 400;
+}
+
+.footer-logo-img {
+  width: 50%;
+  height: auto;
+  display: block;
+}
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-column,
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (max-width: 700px) {
+  .nav-links ul {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+
+    background: #9ced48;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .navbar.active .nav-links ul {
+    display: flex;
+  }
+
+  .product-link,
+  .product-link:visited,
+  .product-link:hover,
+  .product-link:active,
+  .product-link:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+  .footer {
+    padding: 12px 16px;
+  }
+
+  .footer-container {
+    gap: 16px;
+  }
+
+  .footer h2 {
+    font-size: 14px;
+    margin: 0 0 6px;
+  }
+
+  .footer p {
+    font-size: 10px;
+    margin: 2px 0;
+    line-height: 1.2;
+  }
+
+  .footer-logo-img {
+    width: 60%;
+  }
+
+  .footer-column,
+  .footer-logo {
+    gap: 4px;
+  }
+}
+@media (max-width: 1300px) {
+  .grid {
+    grid-template-columns: repeat(3, 250px);
+  }
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 250px);
+  }
+}
+
+@media (max-width: 550px) {
+  .grid {
+    grid-template-columns: repeat(1, 250px);
+  }
+}
+.nav-links a,
+.product-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links a:visited,
+.product-info a:visited {
+  text-decoration: none;
+  color: inherit;
+}

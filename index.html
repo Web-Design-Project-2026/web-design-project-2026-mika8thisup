@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <!--language set-->
+
+  <head>
+    <!--meta info, title, links to css and fonts-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASTR3LA</title>
+    <!--css link and script for carousel-->
+    <link rel="stylesheet" href="cssfiles/LandingPage.css" />
+    <link rel="stylesheet" href="NAVBAR.css" />
+    <script src="jsfiles/navbar.js" defer></script>
+
+    <script src="jsfiles/carousel.js" defer></script>
+    <script src="jsfiles/cart.js" defer></script>
+    <!--font links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Orbitron:wght@400..900&family=Special+Gothic+Expanded+One&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--background text of astr3la-->
+    <div class="background-text"></div>
+    <header class="navbar">
+      <div class="menu-toggle">☰</div>
+      <div class="logo">
+        <a href="index.html">ASTR3LA</a>
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html" class="active-nav">Home</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="Tour.html">Tour</a></li>
+          <li class="cart-wrapper">
+            <a href="#" class="cart-btn">
+              Cart <span class="cart-count">0</span>
+            </a>
+
+            <div class="cart-backdrop"></div>
+
+            <div class="cart-overlay">
+              <button class="cart-close">✕</button>
+
+              <h3>Your Cart</h3>
+              <div class="cart-items"></div>
+
+              <a href="checkout.html" class="checkout-btn">Checkout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="hero-section">
+      <div class="hero-content">
+        <div class="sliderContainer">
+          <!-- controls -->
+          <div class="controls">
+            <div class="prev-button"></div>
+            <div class="next-button"></div>
+          </div>
+
+          <div class="slider">
+            <div class="slide active-slide">
+              <img
+                src="images/carousel/Carousel1.png"
+                alt="Get ready for the new album! Preorder Astrela's new album called oblivion. Save it to your music steaming platform  to be there when it releases!"
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="images/carousel/Carousel2.png"
+                alt="The Deluxe Edition.Preorder Astrela's new album called oblivion. Save it to your music steaming platform  to be there when it releases! White edition, featuring two extra songs."
+              />
+            </div>
+
+            <div class="slide">
+              <img
+                src="images/carousel/SpecialBundleCarousel.png"
+                alt="Special Bundle. Includes the album, two keychains, one green and one pink. A tote bag, and an exclusive blue hoodie."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- spacing under carousel -->
+      <div class="page-spacer"></div>
+
+      <section class="newsletter-section">
+        <h2 class="newsletter-title">
+          <img
+            class="newsletter-image"
+            src="images/subsri.png"
+            alt="Subscribe to our newsletter"
+          />
+        </h2>
+
+        <form class="newsletter-form">
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" />
+
+              <span class="custom-checkbox"></span>
+
+              ASTR3LA news and updates
+            </label>
+
+            <label class="checkbox-label">
+              <input type="checkbox" />
+              <span class="custom-checkbox"></span>
+              MIKArecords updates
+            </label>
+          </div>
+
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Enter your email"
+            required
+          />
+
+          <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+        </form>
+        <div class="order-toast" id="orderToast">Subscribed successfully!</div>
+      </section>
+    </main>
+    <!-- END page-container -->
+    <!--to da left! aboutus etc-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h2>ABOUT US</h2>
+          <p>
+            MIKArecords is an independent record label dedicated to discovering
+            and promoting unique musical talents. We strive to create a
+            supportive environment for artists to thrive and connect with their
+            audience.
+          </p>
+        </div>
+        <!--in da middle!-->
+        <div class="footer-column">
+          <h2>CONTACT</h2>
+          <p>Email: info@mikarecords.com</p>
+        </div>
+        <!--to da right! mika logo-->
+        <div class="footer-logo">
+          <img
+            src="images/MikaLOGO.png"
+            alt="MIKA records Logo"
+            class="footer-logo-img"
+          />
+          <p>&copy; 2026 MIKArecords. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

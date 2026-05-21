@@ -1,0 +1,97 @@
+.tour-layout {
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+  padding-bottom: 100px;
+}
+.tour-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.tour-item {
+  width: min(800px, 90%);
+  height: max(120px, 3vh);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  margin-bottom: 22px;
+}
+
+.tour-item:hover {
+  transform: translateY(-4px);
+  border-color: #fa538b;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  border: 2px solid #fa538b;
+}
+
+.tour-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tour-date {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.tour-btn {
+  padding: 9px 18px;
+  border: 2px solid #9ced48;
+  border-radius: 5px;
+  background: transparent;
+  color: #9ced48;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.tour-btn:hover {
+  background: #9ced48;
+  color: black;
+  transform: scale(1.05);
+}
+.tour-city {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+}
+
+.tour-country {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  color: white;
+}
+
+.tour-venue {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  font-style: italic;
+}

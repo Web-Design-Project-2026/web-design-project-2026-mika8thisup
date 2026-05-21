@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <!--language set-->
+  <head>
+    <!--meta info, title, links to css and fonts-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASTR3LA</title>
+    <!--link to css file-->
+    <link rel="stylesheet" href="cssfiles/checkout.css" />
+    <link rel="stylesheet" href="NAVBAR.css" />
+    <script src="jsfiles/navbar.js" defer></script>
+    <script src="jsfiles/cart.js" defer></script>
+    <script src="jsfiles/checkout.js" defer></script>
+    <!--Special gothic expanded one-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Orbitron:wght@400..900&family=Special+Gothic+Expanded+One&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--MonteCarlo-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=MonteCarlo&family=Orbitron:wght@400..900&family=Special+Gothic+Expanded+One&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=MonteCarlo&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Special+Gothic+Expanded+One&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background-text"></div>
+    <!--page content-->
+    <!--background text of astr3la-->
+    <div class="background-text"></div>
+    <header class="navbar">
+      <div class="menu-toggle">☰</div>
+      <div class="logo">
+        <a href="index.html">ASTR3LA</a>
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="Tour.html">Tour</a></li>
+          <li class="cart-wrapper">
+            <a href="#" class="cart-btn">
+              Cart <span class="cart-count">0</span>
+            </a>
+
+            <div class="cart-backdrop"></div>
+
+            <div class="cart-overlay">
+              <button class="cart-close">✕</button>
+
+              <h3>Your Cart</h3>
+              <div class="cart-items"></div>
+
+              <a href="checkout.html" class="checkout-btn">Checkout</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="layout">
+      <main class="main-content">
+        PRODUCTS IN YOUR CART
+        <div class="checkout-container">
+          <div class="checkout-items"></div>
+          <div class="checkout-total"></div>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <h2>Contact Information</h2>
+
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" />
+        </div>
+
+        <div class="form-group">
+          <label for="address">Shipping Address</label>
+          <input type="text" id="address" />
+        </div>
+
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" />
+        </div>
+
+        <div class="form-group">
+          <label for="zip">Postal Code</label>
+          <input type="text" id="zip" />
+        </div>
+
+        <button class="place-order-btn" id="placeOrderBtn">PLACE ORDER</button>
+
+        <div class="order-toast" id="orderToast">
+          Order placed successfully!
+        </div>
+      </aside>
+    </div>
+    <!-- END page-container -->
+    <!--to da left! aboutus etc-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h2>ABOUT US</h2>
+          <p>
+            MIKArecords is an independent record label dedicated to discovering
+            and promoting unique musical talents. We strive to create a
+            supportive environment for artists to thrive and connect with their
+            audience.
+          </p>
+        </div>
+
+        <!--in da middle!-->
+        <div class="footer-column">
+          <h2>CONTACT</h2>
+          <p>Email: info@mikarecords.com</p>
+        </div>
+
+        <!--to da right! mika logo-->
+        <div class="footer-logo">
+          <img
+            src="images/MikaLOGO.png"
+            alt="MIKA records Logo"
+            class="footer-logo-img"
+          />
+          <p>&copy; 2026 MIKArecords. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

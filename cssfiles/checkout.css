@@ -1,0 +1,295 @@
+.checkout-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.checkout-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.checkout-qty {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkout-qty button {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.checkout-price {
+  width: 120px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.checkout-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.checkout-container {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+  padding-bottom: 60px;
+  padding-top: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.checkout-total {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.layout {
+  display: flex;
+  gap: 20px;
+
+  width: 90%;
+  margin: 40px auto;
+}
+
+.main-content {
+  flex: 3;
+
+  background: rgb(255, 255, 255);
+  min-height: 400px;
+
+  padding: 40px;
+  margin-top: 100px;
+  border-radius: 10px;
+
+  font-family: "Special Gothic Expanded One", sans-serif;
+  letter-spacing: 1px;
+}
+
+.sidebar {
+  flex: 1;
+
+  background: #9ced48;
+  min-height: 400px;
+
+  padding: 20px;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+.background-text {
+  position: fixed;
+  inset: 0;
+
+  z-index: -1;
+
+  background-image: url("../images/backgroundsmallandlighter.png");
+  background-repeat: repeat;
+
+  background-size: 500px;
+
+  pointer-events: none;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+
+.form-group input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-family: inherit;
+
+  outline: none;
+}
+
+.form-group input:focus {
+  box-shadow: 0 0 0 2px black;
+}
+
+.place-order-btn {
+  width: 100%;
+  margin-top: 20px;
+
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+  background: black;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.place-order-btn:hover {
+  opacity: 0.85;
+}
+
+.order-toast {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+
+  background: black;
+  color: white;
+
+  padding: 16px 22px;
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  pointer-events: none;
+
+  transition: 0.3s ease;
+
+  z-index: 9999;
+}
+
+.order-toast.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.footer {
+  background-color: #fa538b;
+  padding: 20px 40px;
+  color: white;
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+}
+.footer-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  gap: 40px;
+}
+.footer h2 {
+  font-size: clamp(16px, 1.2vw, 20px);
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+.footer p {
+  margin: 5px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(10px, 1vw, 16px);
+}
+
+.footer-logo-img {
+  width: 50%;
+  height: auto;
+  display: block;
+}
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-column,
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cart-count {
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+@media (max-width: 730px) {
+  .layout {
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .main-content {
+    order: 1;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+}
+.nav-links ul {
+  display: none;
+}
+
+.navbar.active .nav-links ul {
+  display: flex;
+}
+@media (max-width: 700px) {
+  .footer {
+    padding: 12px 16px;
+  }
+
+  .footer-container {
+    gap: 16px;
+  }
+
+  .footer h2 {
+    font-size: 14px;
+    margin: 0 0 6px;
+  }
+
+  .footer p {
+    font-size: 10px;
+    margin: 2px 0;
+    line-height: 1.2;
+  }
+
+  .footer-logo-img {
+    width: 60%;
+  }
+
+  .footer-column,
+  .footer-logo {
+    gap: 4px;
+  }
+}

@@ -1,0 +1,320 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  margin: 40px auto;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: stretch;
+}
+
+.main-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+
+  background: rgb(39, 39, 39);
+  border-radius: 12px;
+
+  padding: 40px;
+  margin-top: 100px;
+
+  width: 100%;
+  max-width: 1000px;
+}
+
+.background-text {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background-image: url("../images/backgroundsmallandlighter.png");
+  background-repeat: repeat;
+  background-size: 500px;
+
+  pointer-events: none;
+}
+
+.product-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-items {
+  color: white;
+  font-size: 13px;
+}
+
+.product-image-wrapper {
+  flex: 1.2;
+  max-width: 650px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 100%;
+  align-items: flex-start;
+  color: white;
+  padding-right: 10px;
+}
+
+.product-title,
+.product-description,
+.product-price,
+.tracklist {
+  width: 100%;
+  max-width: 100%;
+}
+
+.product-title {
+  font-size: clamp(34px, 3vw, 72px);
+  margin: 0;
+  color: white;
+}
+
+.product-description {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: white;
+  font-style: italic;
+  font-size: clamp(12px, 1.5vw, 10px);
+  text-align: justify;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.product-price {
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0;
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 18px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 12px;
+  background: #fa538b;
+  color: white;
+  margin-bottom: 10px;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: bold;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.add-to-cart:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.footer {
+  background-color: #fa538b;
+  padding: 20px 40px;
+  color: white;
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  gap: 40px;
+}
+
+.footer h2 {
+  font-size: clamp(16px, 1.2vw, 20px);
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 600;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(10px, 1vw, 16px);
+  font-weight: 400;
+}
+
+.footer-logo-img {
+  width: 50%;
+  height: auto;
+  display: block;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-column,
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (max-width: 750px) {
+  .main-content {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .product-info {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  .product-title {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(28px, 8vw, 48px);
+    line-height: 1;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+  .product-image-wrapper,
+  .product-image {
+    width: 70%;
+    max-width: 100%;
+  }
+  .product-price {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .product-description {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .product-image-wrapper {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .product-info {
+    width: 100%;
+    max-width: 350px;
+    padding: 0;
+    gap: 12px;
+    text-align: justify;
+  }
+
+  .product-title {
+    text-align: center;
+    width: 100%;
+  }
+  .product-price {
+    text-align: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .product-description {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  @media (max-width: 700px) {
+    .footer {
+      padding: 12px 16px;
+    }
+
+    .footer-container {
+      gap: 16px;
+    }
+
+    .footer h2 {
+      font-size: 14px;
+      margin: 0 0 6px;
+    }
+
+    .footer p {
+      font-size: 10px;
+      margin: 2px 0;
+      line-height: 1.2;
+    }
+
+    .footer-logo-img {
+      width: 60%;
+    }
+
+    .footer-column,
+    .footer-logo {
+      gap: 4px;
+    }
+  }
+}
