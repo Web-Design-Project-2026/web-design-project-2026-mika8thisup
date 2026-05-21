@@ -25,7 +25,14 @@ body {
   opacity: 0.45;
   z-index: -1;
 }
-
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
 .main {
   padding: 0 20px 40px;
   width: 70%;
@@ -242,4 +249,15 @@ body {
   .grid {
     grid-template-columns: repeat(1, 250px);
   }
+}
+.nav-links a,
+.product-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links a:visited,
+.product-info a:visited {
+  text-decoration: none;
+  color: inherit;
 }
