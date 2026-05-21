@@ -8,6 +8,9 @@ body {
   background-color: black;
   overflow-x: hidden;
 }
+p {
+  font-family: "Poppins", sans-serif;
+}
 .content {
   flex: 1;
 }
@@ -197,9 +200,8 @@ body {
 }
 .footer p {
   margin: 5px 0;
-  font-family: "Poppins", sans-serif;
   font-size: clamp(10px, 1vw, 16px);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .footer-logo-img {
