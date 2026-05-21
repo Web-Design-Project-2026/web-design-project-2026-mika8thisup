@@ -264,3 +264,32 @@ body {
 .navbar.active .nav-links ul {
   display: flex;
 }
+@media (max-width: 700px) {
+  .footer {
+    padding: 12px 16px;
+  }
+
+  .footer-container {
+    gap: 16px;
+  }
+
+  .footer h2 {
+    font-size: 14px;
+    margin: 0 0 6px;
+  }
+
+  .footer p {
+    font-size: 10px;
+    margin: 2px 0;
+    line-height: 1.2;
+  }
+
+  .footer-logo-img {
+    width: 60%;
+  }
+
+  .footer-column,
+  .footer-logo {
+    gap: 4px;
+  }
+}
